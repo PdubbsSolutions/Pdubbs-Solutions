@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "eslint": "^9.13.0",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.6.0",
+    "gh": "^2.8.9"
+  },
+  "name": "final-workspace",
+  "version": "1.0.0",
+  "description": "PDubbs Solutions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "firebase run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "pdubbsfinal"
+  },
+  "keywords": [
+    "pdubbs",
+    "solutions"
+  ],
+  "author": "PDubbsSolutions",
+  "license": "ISC"
+}
