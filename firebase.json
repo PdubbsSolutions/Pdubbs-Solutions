@@ -1,0 +1,39 @@
+{
+  "hosting": {
+    "public": "public",
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "https://pdubbssolutions.web.app/",
+        "type": 301
+      }
+    ],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "public/index.html"
+      }
+    ]
+  },
+  "database": {
+    "rules": "database.rules.json"
+  },
+  "emulators": {
+    "database": {
+      "port": 5500
+    },
+    "hosting": {
+      "port": 5500
+    },
+    "ui": {
+      "enabled": true,
+      "port": 5500
+    },
+    "singleProjectMode": true
+  }
+}

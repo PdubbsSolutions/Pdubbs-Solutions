@@ -1,9 +1,17 @@
 {
   "dependencies": {
+    "ejs": "^3.1.10",
     "eslint": "^9.13.0",
+    "express": "^4.21.1",
     "firebase": "^10.14.1",
     "firebase-admin": "^12.6.0",
-    "gh": "^2.8.9"
+    "firebase-tools": "^13.22.1",
+    "gh": "^1.11.14",
+    "jsonwebtoken": "^9.0.2",
+    "nodemailer": "^6.9.15",
+    "powershell": "^2.3.2",
+    "python3": "^0.0.1",
+    "sudo": "^1.0.3"
   },
   "name": "final-workspace",
   "version": "1.0.0",
@@ -13,16 +21,22 @@
     "test": "test"
   },
   "scripts": {
-    "test": "firebase run"
+    "test": "firebase serve"
   },
   "repository": {
     "type": "git",
-    "url": "pdubbsfinal"
+    "url": "https://pdubbssolutions.web.app/"
   },
   "keywords": [
     "pdubbs",
     "solutions"
   ],
   "author": "PDubbsSolutions",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.1",
+    "globals": "^15.11.0"
+  }
 }
