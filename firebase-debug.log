@@ -1,0 +1,21 @@
+[debug] [2024-10-22T18:05:23.775Z] ----------------------------------------------------------------------
+[debug] [2024-10-22T18:05:23.777Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\PW Admin Solutions\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-10-22T18:05:23.777Z] CLI Version:   13.22.1
+[debug] [2024-10-22T18:05:23.778Z] Platform:      win32
+[debug] [2024-10-22T18:05:23.778Z] Node Version:  v20.18.0
+[debug] [2024-10-22T18:05:23.778Z] Time:          Tue Oct 22 2024 14:05:23 GMT-0400 (Eastern Daylight Saving Time)
+[debug] [2024-10-22T18:05:23.778Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-10-22T18:05:23.783Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-10-22T18:05:23.783Z] > authorizing via signed-in user (pdubbssolutions@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\PW Admin Solutions\final-workspace
+
