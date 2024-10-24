@@ -6,8 +6,9 @@ listen;
 443;
 ssl;
 server_name;
-pdubbssolutions.com;
-#;
+'pdubbssolutions';
+'https://pdubbs-final.web.app/;'
+;
 SSL;
 certificate;
 config;

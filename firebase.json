@@ -1,39 +1,25 @@
 {
   "hosting": {
-    "public": "public",
-    "redirects": [
-      {
-        "source": "/",
-        "destination": "https://pdubbssolutions.web.app/",
-        "type": 301
-      }
-    ],
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "public/index.html"
-      }
-    ]
+      "public": "public",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "database": {
-    "rules": "database.rules.json"
+      "rules": "database.rules.json"
   },
   "emulators": {
-    "database": {
-      "port": 5500
-    },
-    "hosting": {
-      "port": 5500
-    },
-    "ui": {
-      "enabled": true,
-      "port": 5500
-    },
-    "singleProjectMode": true
+      "database": {
+          "port": 5000
+      },
+      "hosting": {
+          "port": 5000
+      },
+      "ui": {
+          "enabled": true,
+          "port": 5000
+      },
+      "singleProjectMode": true
+  },
+  "remoteconfig": {
+      "template": "remoteconfig.template.json"
   }
 }
