@@ -1,4 +1,4 @@
-<script>
+
 	document.addEventListener("DOMContentLoaded", function () {
                 const customRequestForm = document.querySelector("#custom-request form");
 	const sessionForm = document.querySelector("#book-session form");
@@ -49,7 +49,6 @@
                         });
                 });
             });
-</script>
 
 const firebaseConfig = {
 	apiKey: "AIzaSyAwwveYRqdPTsnLosZJzR8L-jk8DjzwvLo",

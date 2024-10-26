@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta http-equiv="refresh" content="url=https://pdubbs-final.web.app">
-        <meta name="metadataStoreURL" content="https://us-central1-aiplatform.googleapis.com/v1/projects/pdubbs-solutions/locations/us-central1/metadataStores?metadata_store_id=default">
-        <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-        <link rel="stylesheet"  type="text/css" href="/public/app/static/styles.css" />
-        <title>Pdubbs Solutions | Dashboard</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
-        </head>
-       
-        <header>
-            <img style="z-index: -999; position: relative; top: -25px; max-width: 200px; display: block; margin: 0 auto; cursor: pointer; height: auto;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
-                <div class="dashboard-container">
-                            <h1 id=dashboard-text" style="text-align: center; margin-top: -60px; padding: 0;"> Welcome to your Dashboard!</h1>
-                
-        </header>
-<body>        
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="refresh" content="url=https://pdubbs-final.web.app">
+      <meta name="metadataStoreURL" content="https://us-central1-aiplatform.googleapis.com/v1/projects/pdubbs-solutions/locations/us-central1/metadataStores?metadata_store_id=default">
+      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <link rel="stylesheet"  type="text/css" href="/public/app/static/styles.css" />
+      <title>Pdubbs Solutions | Dashboard</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+    </head>
+<body>
+   <header>
+       <img style="z-index: -999; position: relative; top: -25px; max-width: 200px; display: block; margin: 0 auto; cursor: pointer; height: auto;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
+          <div class="dashboard-container">
+               <h1 id="dashboard-text" style="text-align: center; margin-top: -60px; padding: 0;"> Welcome to your Dashboard!</h1>
+          </div>
+   </header>       
  <nav>
     <div class="icon-container">
             <div class="dashboard-icons">
@@ -60,16 +59,15 @@
                     <p class="icon-label reports" id="icon-label" name="reports">Reports</p>
                 </div>
             </div>
-        </div>
  </nav>
             <br>
             <div class="filter-section">
                 <div class="filter-item">
-                   <h2>Submit a Custom Request <span style="color: #a8738a;"="arrow">➤</span></h2>
+                   <h2>Submit a Custom Request <span style="color: #a8738a;" name="arrow">➤</span></h2>
                    <section id="custom-request">
-                      <form action="/request-document" method="POST" enctype="multipart/form-data">
+                     <form action="/request-document" method="POST" enctype="multipart/form-data">
                          <input type="text" name="first-name" autocomplete="given-name" placeholder="First Name" required/><br>
-                         <input type="text" name="last-name" autocomplete="family-name" placeholder="Last Name" required/></form><br>
+                         <input type="text" name="last-name" autocomplete="family-name" placeholder="Last Name" required/><br>
                          <input type="number" name="phoneNumber" placeholder="Phone Number" required /><br>
                          <input type="email" name="email" placeholder="Email Address" required /><br>
                          <textarea name="details" placeholder="Customization details" required></textarea><br>
@@ -126,7 +124,7 @@
                       <form action="/request-partnership" method="POST">
                          <input type="text" autocomplete="organization" name="companyName" placeholder="Company Name" required /><br>
                          <input type="text" autocomplete="street-address" name="companyAddress" autcomplete="street-address" placeholder="Provide your Business Address" required /><br>
-                         <input type="email" autocomplete="email" name="email" autocomplete="email" placeholder="Email Address" required /><br>
+                         <input type="email" autocomplete="email" name="email" placeholder="Email Address" required /><br>
                          <textarea name="message" placeholder="Partnership Details" required></textarea>
                          <br>
                          <button id="dashboard-submit" type="submit">Submit Partnership Request</button>
@@ -184,10 +182,10 @@
             }
         </script>
         <footer><br>
-            <div style="display: inline; margin-top: 0px; text-decoration: none; " class="auth-buttons"><a href="login.html">Login</a> | <a href="register.html">Register</a> | <a href=contact.html">Contact</a> | <a href="cart.html">Cart</a></div><br>
+            <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="login.html">Login</a> | <a href="register.html">Register</a> | <a href="contact.html">Contact</a> | <a href="cart.html">Cart</a></div><br>
             <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
-            <img style="position: aboslute; max-width: 100px; padding: 0; max-height: 90px; margin-top: 150px; cursor: pointer;  align-content: center;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
+            <img style="position: absolute; max-width: 100px; padding: 0; max-height: 90px; margin-top: 150px; cursor: pointer;  align-content: center;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
         </footer>
 
         <script src="/public/app/static/index.js"></script>
