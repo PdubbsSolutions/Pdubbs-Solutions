@@ -13,15 +13,14 @@
       "rules": "database.rules.json"
   },
   "emulators": {
+    "ui":{
+        "port": 5000
+    },
       "database": {
-        "host": "HOST",
-          "port": "PORT"
+        "host": "127.0.0.1",
+          "port": "9000"
       },
       "hosting": {
-          "port": 5000
-      },
-      "ui": {
-          "enabled": true,
           "port": 5000
       },
       "singleProjectMode": true
