@@ -8,6 +8,7 @@ out/
 .tmp/
 .cache/
 
+
 # Logs
 logs/
 *.log
@@ -20,6 +21,7 @@ yarn-error.log*
 .env.local
 .env.*.local
 .vs/
+.git/
 
 
 # Miscellaneous

@@ -8,8 +8,8 @@ ssl;
 server_name;
 'pdubbssolutions';
 'https://pdubbs-final.web.app/;'
-;
+
 SSL;
 certificate;
 config;
-for (HTTPS; ;);
+for (HTTPS;HTTP ;);

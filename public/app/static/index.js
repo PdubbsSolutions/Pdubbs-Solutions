@@ -1,6 +1,6 @@
 
-	document.addEventListener("DOMContentLoaded", function () {
-                const customRequestForm = document.querySelector("#custom-request form");
+document.addEventListener("DOMContentLoaded", function () {
+   const customRequestForm = document.querySelector("#custom-request form");
 	const sessionForm = document.querySelector("#book-session form");
 	const partnershipForm = document.querySelector("#partnership form");
 
