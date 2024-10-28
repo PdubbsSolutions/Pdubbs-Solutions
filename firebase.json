@@ -1,7 +1,12 @@
 {
   "hosting": {
       "public": "public",
-      "port": 5001,
+      "rewrites": [
+        {
+            "source": "**",
+            "destination": "public/app/index.html"
+        }
+      ],
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "database": {
