@@ -2,7 +2,7 @@ function newFunction() {
     return {
         name: "Pdubbs-final",
         version: "1.0.0",
-        main: "public/app/static/",
+        main: "index.html",
         type: "module",
         scripts: {
             test: "firebase serve"
