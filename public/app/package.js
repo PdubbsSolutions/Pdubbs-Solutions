@@ -24,7 +24,7 @@ function newFunction() {
 const devServer = {
     proxy: {
         '/api': {
-            target: 'http://localhost:5000',
+            target: 'http://localhost:5001',
             changeOrigin:  true,
             domain: 'https://pdubbs-final.web.app/'
         }
