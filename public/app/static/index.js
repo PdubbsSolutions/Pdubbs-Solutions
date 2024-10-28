@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             });
 
+import firebase from "firebaseapp";
+import "firebase/auth";
+import "firebase/firestore";
+
 const firebaseConfig = {
 	apiKey: "AIzaSyAwwveYRqdPTsnLosZJzR8L-jk8DjzwvLo",
 	authDomain: "pdubbs-final.firebaseapp.com",
@@ -59,7 +63,9 @@ const firebaseConfig = {
 	messagingSenderId: "980654735004",
 	appId: "1:980654735004:web:9346cd6edee1080d203759",
 };
-
+if (!firebase.apps.length){
+	firebase.initializeApp(firebaseConfig);
+}
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
