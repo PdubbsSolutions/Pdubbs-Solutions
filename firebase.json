@@ -14,7 +14,7 @@
   },
   "emulators": {
     "ui":{
-        "port": 5000
+        "port": 5001
     },
       "database": {
         "host": "127.0.0.1",
