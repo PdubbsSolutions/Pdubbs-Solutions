@@ -17,7 +17,7 @@
         "port": 5000
     },
       "database": {
-        "host": "127.0.0.1",
+        "host": "199.36.158.100",
           "port": "5000"
       },
       "singleProjectMode": true
