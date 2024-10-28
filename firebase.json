@@ -1,6 +1,7 @@
 {
   "hosting": {
       "public": "public",
+      "port": 5001,
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "database": {
@@ -15,7 +16,7 @@
       },
       "ui": {
           "enabled": true,
-          "port": 5000
+          "port": 5001
       },
       "singleProjectMode": true
   },
