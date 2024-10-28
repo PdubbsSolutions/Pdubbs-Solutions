@@ -14,14 +14,15 @@
   },
   "emulators": {
       "database": {
-          "port": 5000
+        "host": "HOST",
+          "port": "PORT"
       },
       "hosting": {
-          "port": 5001
+          "port": 5000
       },
       "ui": {
           "enabled": true,
-          "port": 5001
+          "port": 5000
       },
       "singleProjectMode": true
   },
