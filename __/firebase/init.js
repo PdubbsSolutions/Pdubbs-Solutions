@@ -12,4 +12,4 @@ server_name;
 SSL;
 certificate;
 config;
-for (HTTPS;HTTP ;);
+for (HTTPS; ;);
