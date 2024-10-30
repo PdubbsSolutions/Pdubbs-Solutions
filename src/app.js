@@ -76,7 +76,7 @@ app.post("/request-partnership", (req, res) => {
     res.send("Partnerhsip request received from ${companyName}");
 });
 
-const PORT = process.env.port || 5000;
+const PORT = process.env.port || 5001;
 app.listen(PORT, () => {
     console.log("Server running on port ${PORT}");
 });

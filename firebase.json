@@ -1,6 +1,12 @@
 {
   "hosting": {
-      "public": "public",
+      "public": "/public/app/static",
+      "rewrites":[
+        {
+            "source": "**",
+            "destination": "/index.html"
+        }
+      ],
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
   },
   "database": {
@@ -11,11 +17,11 @@
           "port": 5000
       },
       "hosting": {
-          "port": 5000
+          "port": 5001
       },
       "ui": {
           "enabled": true,
-          "port": 5000
+          "port": 5001
       },
       "singleProjectMode": true
   },

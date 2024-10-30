@@ -1,5 +1,6 @@
 # Node Modules
 node_modules/
+.java/
 
 # Build output
 dist/
@@ -43,6 +44,7 @@ Desktop.ini
 
 #config
 config/venv/
+.git/index.lock
 
 #environments
 my_flask_project

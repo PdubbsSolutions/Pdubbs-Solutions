@@ -2,7 +2,7 @@ function newFunction() {
     return {
         name: "Pdubbs-final",
         version: "1.0.0",
-        main: "index.html",
+        main: "index.js",
         type: "module",
         scripts: {
             test: "firebase serve"
@@ -24,7 +24,7 @@ function newFunction() {
 const devServer = {
     proxy: {
         '/api': {
-            target: 'http://localhost:5000',
+            target: 'http://localhost:5001',
             changeOrigin:  true,
             key:'AIzaSyAwwveYRqdPTsnLosZJzR8L-jk8DjzwvLo',
             domain: 'https://pdubbs-final.web.app//'

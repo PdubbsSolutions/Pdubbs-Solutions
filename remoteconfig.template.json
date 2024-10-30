@@ -22,9 +22,9 @@
      "timeout": 30000
    },
    "auth": {
-     "clientId": "your-client-id",
+     "client_id": "100113090829573035011",
      "clientSecret": "your-client-secret",
-     "tokenUrl": "https://auth.pdubbssolutions.com/token"
+     "tokenUrl": "https://oauth2.googleapis.com/token"
    },
    "database": {
      "rules": "database.rules.json"

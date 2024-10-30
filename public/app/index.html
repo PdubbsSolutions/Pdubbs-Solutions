@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html style="overflow: hidden;">
     <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE-edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <meta http-equiv="refresh" content="url=https://pdubbs-final.web.app">
-      <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
       <link rel="stylesheet"  type="text/css" href="/public/app/static/styles.css" />
       <title>Pdubbs Solutions | Dashboard</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,68 +13,100 @@
     </head>
 <body>
    <header>
-       <img style="z-index: -999; position: relative; top: -25px; max-width: 200px; display: block; margin: 0 auto; cursor: pointer; height: auto;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
+       <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
           <div class="dashboard-container">
-               <h1 id="dashboard-text" style="text-align: center; margin-top: -60px; padding: 0;"> Welcome to your Dashboard!</h1>
+            <div class="top-icon" style="display:none;">
+                <div class="small-icon-container">
+                    <div class="dashboard-icons">
+                        <div class="icons" onclick="goToPage(cart.html)"><script src="https://cdn.lordicon.com/lordicon.js" ></script><lord-icon src="/public\app\static\js\Shopping cart_custom_icon.json" trigger="hover" colors="primary:#aaafb2,secondary:#a8738a" style="width:55px;height:55px;cursor:pointer;"></lord-icon> <br><p style="position:absolute; top:5px; text-align: center; right: 0px; white-space:nowrap;" class="icon-label cart" id="icon-label" name="cart">View Cart</p> </div>
+                    </div>
+                </div>
+            </div>
+               <h1 id="dashboard-text" style="text-align: center; font-size: 2rem; margin-top: -15px; padding: 0;"><span> Welcome to your Dashboard!</span></h1>
           </div>
    </header>       
  <nav>
     <div class="icon-container">
+        <div class="dashboard-icons">
+            <div class="icons" onclick="goToPage('/public\app\static\pages\products.html')">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon 
+                    src="/public\app\static\js\products_custom_icon.json"
+                    trigger="hover"
+                    colors="primary:#a8738a,secondary:#aaafb2"
+                    style="width:65px;height:60px; top:5px; cursor: pointer;" >
+                </lord-icon>
+                <p class="icon-label products" id="icon-label" name="products">Prodcuts</p>
+            </div>
+        </div>
             <div class="dashboard-icons">
-                <div class="icons" onclick="goToPage('contact.html')">
+                <div class="icons" onclick="goToPage('/public\app\static\pages\contact.html')">
                     <script src="https://cdn.lordicon.com/lordicon.js"></script>
                     <lord-icon
                         src="https://cdn.lordicon.com/amjaykqd.json"
                         trigger="hover"
-                        colors="primary:#aaafb2,secondary:#a8378a"
-                        style="width:60px;height:60px; cursor: pointer;">
-                    </lord-icon><br>
+                        colors="primary:#aaafb2,secondary:#a8738a"
+                        style="width:60px;height:60px; top: 4px;cursor: pointer;">
+                    </lord-icon>
                     <p class="icon-label contact-us" id="icon-label" name="contact">Contact</p>
                  </div>
             </div>
             <div class="dashboard-icons">
-                    <div class="icons" onclick="goToPage('projects.html')">
+                    <div class="icons" onclick="goToPage('/public\app\static\pages\projects.html')">
                         <script src="/public/app/static/js/Folder open_custom_icon.json"></script>  
                             <lord-icon
                             src="/public/app/static/js/Folder open_custom_icon.json"
                             trigger="hover"
-                            colors="primary:#aaafb2,secondary:#a8378a"
-                            style="width:60px;height:60px; cursor: pointer;">
+                            colors="primary:#aaafb2,secondary:#a8738a"
+                            style="width:60px;height:60px; top: 4px; margin-bottom: 0; cursor: pointer;">
                         </lord-icon>
                         <p class="icon-label projects" id="icon-label" name="projects">Projects</p>
                     </div>
                 </div>
-            </div>
             <div class="dashboard-icons">
-                <div class="icons" onclick="goToPage('reports.html')">
+                <div class="icons" onclick="goToPage('/public\app\static\pages\reports.html')">
                     <script src="/public\app\static\js\Bar graph_custom_icon.json"></script>
                     <lord-icon 
                         src="/public\app\static\js\Bar graph_custom_icon.json"
                         trigger="hover"
-                        colors="primary:#a8378a;"
-                        style="width:60px;height:60px; cursor: pointer;">
+                        colors="primary:#a8738a;"
+                        style="width:60px;height:60px; cursor: pointer; ">
                     </lord-icon>
                     <p class="icon-label reports" id="icon-label" name="reports">Reports</p>
                 </div>
             </div>
+        <div class="dashboard-icons">
+            <div class="icons" onclick="goToPage('/public\app\static\pages\templates.html')">
+                <script src="/public\app\static\js\templates_custom_icon.json"></script>
+                <lord-icon
+                 src="/public\app\static\js\templates_custom_icon.json" 
+                trigger="hover"
+                colors="primary:#a8738a,secondary:#aaafb2"
+                style="width:60px;height:60px; cursor:pointer; ">
+                </lord-icon>
+                <p style="text-align: center; right:255px;" class="icon-label templates" id="icon-label" name="templates">Templates</p>
+            </div>
+        </div>
+    </div>
  </nav>
+            <br><br><br><br><br>
             <br>
+        <div class="filter-container">
             <div class="filter-section">
                 <div class="filter-item">
-                   <h2>Submit a Custom Request <span style="color: #a8738a;" name="arrow">➤</span></h2>
+                   <h2>Submit a Custom Request <span style="color: #a8738a;" class="arrow">➤</span></h2>
                    <section id="custom-request">
                      <form action="/request-document" method="POST" enctype="multipart/form-data">
                          <input type="text" name="first-name" autocomplete="given-name" placeholder="First Name" required/><br>
                          <input type="text" name="last-name" autocomplete="family-name" placeholder="Last Name" required/><br>
                          <input type="number" name="phoneNumber" placeholder="Phone Number" required /><br>
-                         <input type="email" name="email" placeholder="Email Address" required /><br>
+                         <input type="email" autocomplete="email" name="email" placeholder="Email Address" required /><br>
                          <textarea name="details" placeholder="Customization details" required></textarea><br>
                          <input style="cursor: pointer;" id="choose-file" type="file" name="document" required /><br>
                          <button id="dashboard-submit" type="submit">Submit Custom Request</button>
                       </form>
                    </section>
                 </div>
-                <div class="filter-section">
                     <div class="filter-item">
                         <form action="/book-session" method="POST" enctype="multipart/form-data">
                             <h2>Book a 1:1 Zoom Session <span style="color: #a8738a;" class="arrow">➤</span></h2>
@@ -91,112 +122,86 @@
                                     <option value="single">Single Session</option>
                                     <option value="recurring">Request Recurring Sessions</option>
                                 </select>
-                
                                 <div id="recurringTextarea" style="display: none; margin-top: 10px;">
                                     <label for="recurringDetails">Please provide details for recurring sessions:</label>
                                     <textarea id="recurringDetails" name="recurringDetails" rows="4" cols="50"></textarea>
                                 </div>
-                                
                                 <button id="dashboard-submit" type="submit">Book 1:1 Zoom Session</button>
                             </section>
                         </form>
                     </div>
+                    <div class="filter-item">
+                        <h2>Request a Client & Vendor Partnership<span style="color: #a8738a;"class="arrow">➤</span></h2>
+                            <section id="partnership">
+                                <form action="/request-partnership" method="POST">
+                                    <input type="text" autocomplete="organization" name="companyName" placeholder="Company Name" required /><br>
+                                    <input type="text" autocomplete="street-address" name="companyAddress" autcomplete="street-address" placeholder="Provide your Business Address" required /><br>
+                                    <input type="email" autocomplete="email" name="email" placeholder="Email Address" required /><br>
+                                    <textarea name="message" placeholder="Partnership Details" required></textarea>
+                                    <br>
+                                    <button id="dashboard-submit" type="submit">Submit Partnership Request</button>
+                                </form>
+                            </section>
+                        </div>
                 </div>
-                
                 <script>
-                function toggleTextarea() {
-                    var sessionOptions = document.getElementById("sessionOptions");
-                    var recurringTextarea = document.getElementById("recurringTextarea");
-                
-                    if (sessionOptions.value === "recurring") {
-                        recurringTextarea.style.display = "block";
-                    } else {
-                        recurringTextarea.style.display = "none";
-                    }
-                }
+                    function adjustOverflow(hasFilterResults){
+                        const container = document.querySelector('.filter-container');
+                        if (hasFilterResults) {
+                            container.style.overflow= 'visible';
+                        } else {
+                            container.style.overflow = 'hidden'
+                        }
+                    }                                   
+                    adjustOverflow(true);
+                    adjustOverflow(false);
                 </script>
-                
-             <div class="filter-section" onclick="toggleFillter(this)">
-                <div class="filter-item">
-                   <h2>Request a Client & Vendor Partnership<span style="color: #a8738a;"class="arrow">➤</span></h2>
-                   <section id="partnership">
-                      <form action="/request-partnership" method="POST">
-                         <input type="text" autocomplete="organization" name="companyName" placeholder="Company Name" required /><br>
-                         <input type="text" autocomplete="street-address" name="companyAddress" autcomplete="street-address" placeholder="Provide your Business Address" required /><br>
-                         <input type="email" autocomplete="email" name="email" placeholder="Email Address" required /><br>
-                         <textarea name="message" placeholder="Partnership Details" required></textarea>
-                         <br>
-                         <button id="dashboard-submit" type="submit">Submit Partnership Request</button>
-                      </form>
-                   </section>
-                </div>
-             </div>
-        <script>
-            const filterItems = document.querySelectorAll('.filter-item h2');
-            filterItems.forEach(item => {
-                item.addEventListener('click', function() {
-                    const section = this.nextElementSibling;
-                    const arrow = this.querySelector('.arrow');
-        
-                    // Toggle the visibility of the section
-                    if (section.style.display === 'block') {
-                        section.style.display = 'none';
-                        arrow.classList.remove('open');
-                    } else {
-                        section.style.display = 'block';
-                        arrow.classList.add('open');
+            </div>
+                <footer><br>
+                    <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.html">Login</a> | <a href="/public\app\static\pages\register.html">Register</a> | <a href="/public\app\static\pages\contact.html">Contact</a> | <a href="/public\app\static\pages\cart.html">Cart</a></div><br>
+                    <div class="ref-buttons">
+                        <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.html">Terms and Conditions</a> |
+                        <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="accessibility.html">Accessibility</a> |
+                        <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
+                    </div>
+                    <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
+                     <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
+                    <img style=" justify-content:center; max-width: 100px; padding: 0; max-height: 100px; left: 420px;margin-top: -20px; cursor: pointer;  z-index: -999; vertical-align: middle;  position:absolute;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
+                </footer>
+                <script type="text/javascript" src="/public/app/static/js/index.js"></script>
+                <script type="text/javascript" src="/public/app/static/js/express.js"></script>
+                <script>
+                    function toggleTextarea() {
+                        var sessionOptions = document.getElementById("sessionOptions");
+                        var recurringTextarea = document.getElementById("recurringTextarea");
+                        if (sessionOptions.value === "recurring") {
+                            recurringTextarea.style.display = "block";
+                        } else {
+                            recurringTextarea.style.display = "none";
+                        }
                     }
-                });
-            });
-        </script>
-        </div>
-        <script>
-            function toggleFilter(element){
-                document.querySelectorAll('.filter-item.active').forEach(item => {
-                    if (item !== element){
-                        item.classList.remove('active');
+                    
+                    function toggleSection(element) {
+                        const section = element.querySelector("section");
+                        const arrow = element.querySelector(".arrow");
+                        if (section.style.display === "none" || section.style.display === " ") {
+                            section.style.display = "block";
+                            if (arrow) arrow.textContent= "▼";
+                        } else {
+                            section.style.display = "none";
+                            if (arrow) arrow.textContent = "➤";
+                        }
                     }
-                });
-                element.classList.toggle('active');
-            }
-            document.addEventListener('click', function(event){
-                const filterSection = document.querySelector('.filter-section');
-                const isClickInside = filterSection.contains(event.target);
-
-                if (!isClickInside){
-                    document.querySelectorAll('.filter-item.actie').forEach(item=> {
-                        item.classList.remove('active');
+            
+                    document.querySelectorAll(".filter-section section").forEach(section => { 
+                        section.style.display = "none";
                     });
-                }
-            });
-            function toggleTextarea() {
-                var sessionOptions = document.getElementById("sessionOptions");
-                var recurringTextarea = document.getElementById("recurringTextarea");
-
-                if (sessionOptions.value === "recurring"){
-                    recurringTextarea.style.display = "block";
-                } else {
-                    recurringTextarea.style.display = "none;"
-                }
-            }
-        </script>
-        <footer><br>
-            <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="login.html">Login</a> | <a href="register.html">Register</a> | <a href="contact.html">Contact</a> | <a href="cart.html">Cart</a></div><br>
-            <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
-            <img style="position: absolute; max-width: 100px; padding: 0; max-height: 90px; margin-top: 150px; cursor: pointer;  align-content: center;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
-        </footer>
-
-        <script src="/public/app/static/index.js"></script>
-            <script>
-        const metadataStoreUrl = "https://us-central1-aiplatform.googleapis.com/v1/projects/pdubbs-solutions/locations/us-central1/metadataStores?metadata_store_id=default";
-        console.log("Metadata Store URL:", metadataStoreUrl);
-
-        // Example usage in a fetch request
-        fetch(metadataStoreUrl)
-            .then(response => response.json())
-            .then(data => console.log(data))
-            .catch(error => console.error("Error:", error));
-    </script>
-    </body>
-</html>
+                    document.querySelectorAll(".filter-item").forEach(item => {
+                        item.addEventListener("click", function(event){
+                            event.stopPropagation();
+                            toggleSection(item);
+                        });
+                    });
+                </script>
+            </body>
+            </html>

@@ -111,7 +111,7 @@
       }
     ],
     "shieldedInstanceConfig"; {
-      "enableSecureBoot"; false,
+      "enableSecureBoot"; true,
       "enableVtpm"; true,
       "enableIntegrityMonitoring"; true
     };
