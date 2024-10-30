@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	});
 });
+
 //*Flash*\\
 app.use(flash());
 app.use((req, res, next) => {
