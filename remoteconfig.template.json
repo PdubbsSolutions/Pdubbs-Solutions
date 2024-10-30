@@ -1,0 +1,37 @@
+{
+   "firebase": {
+     "type": "service_account",
+     "project_id": "pdubbs-solutions",
+     "private_key_id": "8a55e96ed79e7a949d1c061963dc54f417ceadde",
+     "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDFbNzLCLW70KnT\nJ3J4ZUK3lbwhuBjyGL7zRNacMxYVJ+/EOqR37+F9up0Ibq6EWAQ3G3BiRxjaZw0k\n0mDGF5t8T0mscEIHnnk0mTitWzp+KEqwUKF9ksX+536n/Fk+udPmdw1gazD3ccUQ\nMhz1+9Ykx+E6TDCtnGZTWnXAabNk/vIMIyLyizbp0sCaM3KNoupR4bJkBgqT2gy9\nwfeweShtj09DQF6VryWRkl4ZFA3bCS7Y0l/GIRLNkeXTVW+loiLxF98qQgDJejpt\np0VmaBBxy2yn6SSBqW0EF1oHpukkVkiz7eihReHrh8eFB2Fl3cj0reU3T3PDmKXP\nX5KygZBHAgMBAAECggEAXMZvLZRevq9slvdTIkPHqfkaCyh1xJMfbLd9OLMDHhcB\n5A+AyYH3T7u53sQQi83G0VS6J9zsT3oc4aBhbMWcQjsKTpgEV4s/vxl/2mtkHfP2\nQUvqz9WA6OxFh1Cdac4ux39L0HMe9DFJH3bFSE070VYCwAAc4gD8zw/UBQNHE96s\nMSpPL5MbzUpPAmk5u3X7W5IVqnsdDekPz/XmoGrOBR0YcdKFc9XgE1FA8WwePnpm\nRAcCZxBjxcOcO/3hd6GoOPhF7cb0z0A9cVpRgEWosbefHScFSccSofZjLG4mxRk+\nbtTu7djqUgHALNqWaHoQkU2y3t8+P+b3iOZCfxSAxQKBgQD7AmDHKCW5EeCp0g0H\nY7gVCqI0lMzeM2+8riYKQCJa/kRrCJsKOGGYBC7p4mHWtkdDXzqtGsibHXkGehqj\nIjdqoNnZ4C9CeuxnrkSsZplaSLV/LakaqZNLzHX553Oir3RV6k6FKhYfO9DrrEVx\niadGi9bX+C1RUg1aa4EEplnp4wKBgQDJWb6yvSgUs4hNqZIzHbeWwrZG/Se2guK8\nepuzzFp0zxqiNGUsJXMPHqG/sU6hxQXXnxqeRBl0/1+F/WO7w4qkAmr1SJHTg52U\n9PXXBFx+7hYGTvZf8fn47U8yxmle04svBcJveX+qdNy3Ro2qqMSXnp97bjjQVkLa\nT1GZTcKdTQKBgQDVNPDlWZmpOKE/PhcpBq/O16htx1K5DrHDb50KKe3EoqOU0st2\ng+uJx0veCBeY3F1twY7CiLSK5R7uvHqxxJeTr6s74Kvj6Suy6ZiVY9Swln/r1eoE\nprNht/sh2VIkhqnnbE1j2RrPTuynsj2OMiFuz8seyUQdBfgnrJb7Tx2ihwKBgFA7\nzcylqYoOPFtOHe72gYi20DGbgS6uGzGl3dOYs9bmDCPkowgjaCT3PNcJDV9TBk/0\nm4PDeS1w8ZyP6yUP93gBaqORJmLViH6p2iizGTSPJQGgh3aWEtkJn0yJWcWqoES9\nk8wd6yx+YtE5cQw3MheE4uIpesQyC3O4tbhUDx/lAoGBAJ7wbaDxflIFbQU33VRb\nDDmnbtvR3W5t693JUpaVLZTCIdYVNO7tSBH9/zpfycgZ5IMqpACHe8Vq3l0EOCKu\nM757HGGL9lFcRmqyUL4ev1hVZlczsy2TraMgAAw2Iz6UcOsBXhxiPeyHxkUvB6Yn\nu9vOyG2p17tR3fBexZYZGeb5\n-----END PRIVATE KEY-----\n",
+     "client_email": "firebase-adminsdk-zdujj@pdubbs-solutions.iam.gserviceaccount.com",
+     "client_id": "100113090829573035011",
+     "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+     "token_uri": "https://oauth2.googleapis.com/token",
+     "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+     "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-zdujj%40pdubbs-solutions.iam.gserviceaccount.com",
+     "universe_domain": "googleapis.com"
+   },
+   "project": {
+     "name": "final-workspace",
+     "environment": "production",
+     "version": "1.0.0"
+   },
+   "api": {
+     "baseUrl": "https://pdubbs-final.web.app",
+     "timeout": 30000
+   },
+   "auth": {
+     "clientId": "your-client-id",
+     "clientSecret": "your-client-secret",
+     "tokenUrl": "https://auth.pdubbssolutions.com/token"
+   },
+   "database": {
+     "rules": "database.rules.json"
+   },
+   "logging": {
+     "level": "info",
+     "logFilePath": "/var/log/pdubbssolutions.log"
+   }
+ }
+ 

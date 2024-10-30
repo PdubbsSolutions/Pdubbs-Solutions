@@ -1,0 +1,49 @@
+# Node Modules
+node_modules/
+
+# Build output
+dist/
+build/
+out/
+.tmp/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.vs/
+
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# IDE and Editor settings
+.vscode/
+.idea/
+*.iml
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Icon?
+Desktop.ini
+
+#config
+config/venv/
+
+#environments
+my_flask_project
+my_django_project
