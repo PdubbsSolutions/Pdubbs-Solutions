@@ -1,4 +1,16 @@
 
+app.get("/dashboard", ensureAuthenticated, (req, res) => {
+	res.render(join(__dirname, 'public', 'app', 'index.html'));
+});
+
+app.set("view engine", "ejs");
+app.use(express.static(publicDir));
+app.get('/dashboard', (_req, res) => {
+	res.render(join(publicDir, 'app', 'index.html'));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+});
+
 document.addEventListener("DOMContentLoaded", function () {
    const customRequestForm = document.querySelector("#custom-request form");
 	const sessionForm = document.querySelector("#book-session form");
@@ -49,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         });
                 });
             });
-
+//*firebase*\\
 import firebase from "firebaseapp";
 import "firebase/auth";
 import "firebase/firestore";
@@ -69,6 +81,7 @@ if (!firebase.apps.length){
 const app = initializeApp(firebaseConfig);
 const database = getDatabase(app);
 
+//*forms*\\
 document.addEventListener("DOMContentLoaded", function () {
 	const customRequestForm = document.querySelector("#custom-request form");
 	const sessionForm = document.querySelector("#book-session form");
@@ -87,35 +100,8 @@ document.addEventListener("DOMContentLoaded", function () {
 					console.error("Error submitting custom request:", error);
 			  });
 	});
-
-	sessionForm.addEventListener("submit", function (event) {
-		 event.preventDefault();
-		 const formData = new FormData(sessionForm);
-		 const data = Object.fromEntries(formData.entries());
-		 set(ref(database, "sessions/" + Date.now()), data)
-			  .then(() => {
-					alert("Session booked successfully!");
-					sessionForm.reset();
-			  })
-			  .catch((error) => {
-					console.error("Error booking session:", error);
-			  });
-	});
-
-	partnershipForm.addEventListener("submit", function (event) {
-		 event.preventDefault();
-		 const formData = new FormData(partnershipForm);
-		 const data = Object.fromEntries(formData.entries());
-		 set(ref(database, "partnerships/" + Date.now()), data)
-			  .then(() => {
-					alert("Partnership request submitted successfully!");
-					partnershipForm.reset();
-			  })
-			  .catch((error) => {
-					console.error("Error submitting partnership request:", error);
-			  });
-	});
 });
+
 const header = document.querySelector('h1');
 header.textContent ="New Heading";
 
@@ -130,7 +116,7 @@ document.querySelector('form').addEventListener('submit', (e) => {
 		e.preventDefault();
 	}
 });
-
+//*fetchData*\\
 fetch('https://api.example.com/data')
 	.then(response => response.json())
 	.then(data => console.log(data))
@@ -160,3 +146,34 @@ async function fetchData() {
 		console.error('Error fetching data:', error)
 	}
 }
+//*zoom*\\
+app.post('/book-session', ensureAuthenticated, async (req, res) => {
+	const { email, name, date, time } = req.body;
+	let transporter = nodemailer.createTransport({
+		service: 'Gmail',
+		auth: {
+			user: process.env.EMAIL_USER,
+			pass:process.env.EMAIL_PASS
+		}
+	});
+	const mailOptions = {
+		from: process.env.EMAIL_USER,
+		to: email,
+		subject: 'Zoom 1:1 Session Booking',
+		text: 'Thank you ${name}, you have booked a session for ${date} at ${time}.'
+	};
+	transporter.sendMail(mailOptions, (error, info) => {
+		if (error) {
+			return res.status(500).send('Error booking session');
+		}
+		res.send('Session booked successfully');
+	});
+});
+app.post('/request-partnership', ensureAuthenticated, (req, res) => {
+	const {companyName, email, phoneNmber, message} = req.body;
+	res.send('Partnership request received from ${companyName}' );
+});
+const PORT = process.env.PORT || 5001;
+app.listen(5001, () => {
+    console.log("Server running on port 5001");
+});

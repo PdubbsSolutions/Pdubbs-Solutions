@@ -2,7 +2,7 @@ const myRefreshToken = '...'; // Get refresh token from OAuth2 flow
 
 initializeApp({
   credential: refreshToken(myRefreshToken),
-  databaseURL: 'https://<>.firebaseio.com'
+  databaseURL: 'https://pdubbs-final-default-rtdb.firebaseio.com/'
 });
 // Initialize the default app
 const defaultApp = initializeApp(defaultAppConfig);

@@ -1,10 +1,10 @@
 {
     "hosting": {
-      "public": "public",
+      "public": "/public",
       "rewrites": [
         {
           "source": "**",
-          "destination": "public/app/index.html"
+          "destination": "/index.html" 
         }
       ],
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
@@ -19,10 +19,10 @@
       },
       "database": {
         "host": "127.0.0.1",
-        "port": 9001
+        "port": 9000
       }
     },
-    "singleProjectMode": true,
+    "singleProjectMode": false,
     "remoteconfig": {
       "template": "remoteconfig.template.json"
     }
