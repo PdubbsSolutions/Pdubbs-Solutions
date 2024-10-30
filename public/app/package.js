@@ -26,8 +26,7 @@ const devServer = {
         '/api': {
             target: 'http://localhost:5001',
             changeOrigin:  true,
-            key:'AIzaSyAwwveYRqdPTsnLosZJzR8L-jk8DjzwvLo',
-            domain: 'https://pdubbs-final.web.app//'
+            domain: 'https://pdubbs-final.web.app/'
         }
     }
 };

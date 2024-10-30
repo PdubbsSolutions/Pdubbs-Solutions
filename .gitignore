@@ -1,6 +1,6 @@
 # Node Modules
 node_modules/
-.java/
+favicon.ico/
 
 # Build output
 dist/
@@ -8,6 +8,7 @@ build/
 out/
 .tmp/
 .cache/
+
 
 # Logs
 logs/
@@ -17,10 +18,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
-.env
 .env.local
 .env.*.local
 .vs/
+.git/
 
 
 # Miscellaneous
