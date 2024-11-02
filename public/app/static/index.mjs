@@ -79,7 +79,7 @@ if (!firebase.apps.length){
 	firebase.initializeApp(firebaseConfig);
 }
 const app = initializeApp(firebaseConfig);
-const database = getDatabase(app);
+const database = database(app);
 
 //*forms*\\
 document.addEventListener("DOMContentLoaded", function () {
