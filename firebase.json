@@ -1,31 +1,20 @@
 {
-  "database": {
-    "rules": "database.rules.json"
+  "hosting": {
+    "public": "public/app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+    ]
   },
-  "emulators": {
     "database": {
       "host": "127.0.0.1",
       "port": 9000
     },
     "ui": {
       "host": "127.0.0.1",
-      "port": 5002
-    }
-  },
-  "hosting": {
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "public": "/public",
-    "rewrites": [
-      {
-        "destination": "/public/app/index.html",
-        "source": "**"
-      }
-    ]
-  },
+      "port": 5000
+    },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
   },
