@@ -15,7 +15,6 @@ import click
 from werkzeug.datastructures import Headers, ImmutableDict
 from werkzeug.exceptions import (
     BadRequestKeyError,
-    HTTPException,
     InternalServerError,
     RequestRedirect,
     RoutingException,
@@ -29,6 +28,25 @@ from flask_sqlalchemy import SQLAlchemy
 
 # Flask application setup
 app = Flask(__name__)
+app.secret_key = 'PKD8UAB6DTS0'
+from flask import Flask, session
+
+app = Flask(__name__)
+app.secret_key = 'your_secret_key'
+
+@app.route('/set-session')
+def set_session():
+    session['username'] = 'User'
+    return 'Session set!'
+
+@app.route('/get-session')
+def get_session():
+    username = session.get('username', None)
+    return f"Username: {username}"
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 

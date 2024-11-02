@@ -2,10 +2,13 @@ function newFunction() {
     return {
         name: "Pdubbs-final",
         version: "1.0.0",
-        main: "index.html",
+        main: "/index.html",
         type: "module",
         scripts: {
-            test: "firebase serve"
+            test: "firebase serve",
+            app: "app.mjs",
+            index: "index.mjs",
+            express: "express.mjs",
         },
         repository: {
             type: "git",
@@ -13,24 +16,25 @@ function newFunction() {
         },
         author: "Pdubbs Solutions",
         license: "ISC",
-        description: "",
+        description: "PDubbs Solutions",
         parserOptions: {
             sourceType: "module"
         }
     };
 }
 
+
 // Dev server configuration
 const devServer = {
     proxy: {
         '/api': {
-            target: 'http://localhost:5000',
-            changeOrigin:  true,
-            key:'AIzaSyAwwveYRqdPTsnLosZJzR8L-jk8DjzwvLo',
-            domain: 'https://pdubbs-final.web.app//'
+            target: 'pdubbs-final.web.app',
+            changeOrigin: true,
+            domain: 'https://pdubbs-final.web.app'
         }
     }
 };
+
 
 // Example of how you might use these
 const packageConfig = newFunction();

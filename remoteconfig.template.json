@@ -22,11 +22,12 @@
      "timeout": 30000
    },
    "auth": {
-     "clientId": "your-client-id",
-     "clientSecret": "your-client-secret",
-     "tokenUrl": "https://auth.pdubbssolutions.com/token"
+     "client_id": "100113090829573035011",
+     "clientSecret": "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",
+     "tokenUrl": "https://oauth2.googleapis.com/token"
    },
    "database": {
+      "baseUri": "https://pdubbs-final-default-rtdb.firebaseio.com",
      "rules": "database.rules.json"
    },
    "logging": {

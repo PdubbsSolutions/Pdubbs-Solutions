@@ -1446,7 +1446,7 @@ when the Python installation supports SSL.</p>
 <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">auth_handler</span><span class="p">)</span>
 <span class="c1"># ...and install it globally so it can be used with urlopen.</span>
 <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">opener</span><span class="p">)</span>
-<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://www.example.com/login.html&#39;</span><span class="p">)</span>
+<span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://www.example.com/login.ejs&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p><a class="reference internal" href="#urllib.request.build_opener" title="urllib.request.build_opener"><code class="xref py py-func docutils literal notranslate"><span class="pre">build_opener()</span></code></a> provides many handlers by default, including a
@@ -1463,7 +1463,7 @@ programmatically supplied proxy URLs, and adds proxy authorization support with
 
 <span class="n">opener</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">proxy_handler</span><span class="p">,</span> <span class="n">proxy_auth_handler</span><span class="p">)</span>
 <span class="c1"># This time, rather than install the OpenerDirector, we use it directly:</span>
-<span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;http://www.example.com/login.html&#39;</span><span class="p">)</span>
+<span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s1">&#39;http://www.example.com/login.ejs&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Adding HTTP headers:</p>

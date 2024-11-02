@@ -1,5 +1,6 @@
 # Node Modules
 node_modules/
+favicon.ico/
 
 # Build output
 dist/
@@ -7,6 +8,7 @@ build/
 out/
 .tmp/
 .cache/
+
 
 # Logs
 logs/
@@ -16,10 +18,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment variables
-.env
 .env.local
 .env.*.local
 .vs/
+.git/
 
 
 # Miscellaneous
@@ -43,6 +45,7 @@ Desktop.ini
 
 #config
 config/venv/
+.git/index.lock
 
 #environments
 my_flask_project

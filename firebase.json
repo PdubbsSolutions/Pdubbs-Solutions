@@ -1,25 +1,22 @@
 {
   "hosting": {
-      "public": "public",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "public": "public/app",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+    ]
   },
-  "database": {
-      "rules": "database.rules.json"
-  },
-  "emulators": {
-      "database": {
-          "port": 5000
-      },
-      "hosting": {
-          "port": 5000
-      },
-      "ui": {
-          "enabled": true,
-          "port": 5000
-      },
-      "singleProjectMode": true
-  },
+    "database": {
+      "host": "127.0.0.1",
+      "port": 9000
+    },
+    "ui": {
+      "host": "127.0.0.1",
+      "port": 5000
+    },
   "remoteconfig": {
-      "template": "remoteconfig.template.json"
-  }
+    "template": "remoteconfig.template.json"
+  },
+  "singleProjectMode": true
 }

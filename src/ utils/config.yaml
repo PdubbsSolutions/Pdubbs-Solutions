@@ -1,0 +1,11 @@
+subject_config:
+subject:
+  common_name: "pdubbssolutions.com"
+  country_code: "CA"
+  organization: "PDubbs Solutions"
+lifeitme: "864400s"
+server:
+  host: localhost
+  port: 5001;
+
+$csr = Get-Content "\request.csr" -Raw
