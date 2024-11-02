@@ -11,15 +11,16 @@
     "nodemailer": "^6.9.15",
     "vim": "^0.1.0"
   },
-  "name": "final-workspace",
+  "name": "pdubbs-final",
   "version": "1.0.0",
   "description": "PDubbs Solutions",
-  "main": "/public/index.html",
+  "host": "https://pdubbssolutions.ca",
   "directories": {
-    "test": "test"
+    "public": "public"
   },
   "scripts": {
     "test": "firebase serve",
+    "start": "webpack serve --host pdubbs-final.web.app --port 5002",
     "build": "webpack"
   },
   "repository": {

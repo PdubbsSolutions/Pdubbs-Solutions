@@ -1,6 +1,6 @@
 function newFunction() {
     return {
-        name: "Pdubbs-final",
+        name: "Pdubbs Solutions",
         version: "1.0.0",
         main: "/index.html",
         type: "module",
@@ -28,13 +28,17 @@ function newFunction() {
 const devServer = {
     proxy: {
         '/api': {
-            target: 'pdubbs-final.web.app',
+            target: 'https://pdubbssolutions.ca',
             changeOrigin: true,
-            domain: 'https://pdubbs-final.web.app'
+            secure: true,
+        },
+        '/': {
+            target: 'https://pdubbssolutions.com', 
+            changeOrigin: true,
+            secure: true, 
         }
     }
 };
-
 
 // Example of how you might use these
 const packageConfig = newFunction();

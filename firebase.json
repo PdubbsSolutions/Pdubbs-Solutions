@@ -1,20 +1,20 @@
 {
   "hosting": {
-    "public": "public/app",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**"
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
     ]
   },
-    "database": {
-      "host": "127.0.0.1",
-      "port": 9000
-    },
-    "ui": {
-      "host": "127.0.0.1",
-      "port": 5000
-    },
+  "database": {
+    "host": "127.0.0.1",
+    "port": 5002
+  },
+  "ui": {
+    "host": "127.0.0.1",
+    "port": 5002
+  },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
   },
