@@ -1,5 +1,5 @@
 const express = require("express");
-const path = require("path");
+const path = require('path');
 const multer = require("multer");
 const nodemailer = require("nodemailer");
 const flash = require("connect-flash");
@@ -33,10 +33,6 @@ app.use((req, res, next) => {
     next();
 });
 
-// Root route
-app.get("/", (req, res) => {
-    res.render("index");
-});
 
 // Booking session route
 app.post("/book-session", async (req, res) => {
@@ -151,11 +147,62 @@ function ensureAuthenticated(req, res, next) {
     }
     req.flash("error_msg", "Login Required");
     res.redirect("/login");
-}
+};
 
-app.get("/dashboard", ensureAuthenticated, (req, res) => {
-    res.render(join(__dirname, 'public', 'app', 'index.html'));
+app.get("/dashboard", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'index.html'));
 });
+
+app.get("/login", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname,'public', 'app', 'static', 'pages', 'login.html'));
+});
+
+app.get("/register", ensureAuthenticated, ( _req, res) => {
+	res.sendFile(path.join(__dirname,'public', 'app', 'static', 'pages', 'register.html' )); 
+});
+
+app.get("/templates", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'temsplates.html'));
+});
+
+app.get("/accessibility", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'accessibility.html'));
+})
+app.get("/checkout", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname,'public', 'app', 'static', 'pages',  'checkout.html'));
+});
+app.get("/products", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'products.html' ));
+});
+
+app.get("/Privacy Policy", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'privacypolicy.html' ));
+});
+
+app.get("/projects", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'projects.html' ));
+});
+
+app.get("/reports", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'reports.html' ));
+});
+
+app.get("/logout", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'logout.html' ));
+});
+
+app.get("/contact", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'app', 'static', 'pages',  'contact.html' ));
+});
+
+app.get("/sources", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname,'public', 'app', 'pages', 'static',  'sources.html' ));
+});
+
+app.get("/about", ensureAuthenticated, (_req, res) => {
+	res.sendFile(path.join(__dirname,'public', 'app', 'pages', 'static',  'about.html' ));
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(5001, () => {
     console.log("Server running on port 5001");

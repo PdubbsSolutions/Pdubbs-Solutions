@@ -1,5 +1,5 @@
 
-app.get("/dashboard", ensureAuthenticated, (req, res) => {
+app.get("/dashboard", ensureAuthenticated, (_req, res) => {
 	res.render(join(__dirname, 'public', 'app', 'index.html'));
 });
 
@@ -162,7 +162,7 @@ app.post('/book-session', ensureAuthenticated, async (req, res) => {
 		subject: 'Zoom 1:1 Session Booking',
 		text: 'Thank you ${name}, you have booked a session for ${date} at ${time}.'
 	};
-	transporter.sendMail(mailOptions, (error, info) => {
+	transporter.sendMail(mailOptions, (error, _info) => {
 		if (error) {
 			return res.status(500).send('Error booking session');
 		}
@@ -173,7 +173,67 @@ app.post('/request-partnership', ensureAuthenticated, (req, res) => {
 	const {companyName, email, phoneNmber, message} = req.body;
 	res.send('Partnership request received from ${companyName}' );
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+	const navbar = documenr.getElementByID("navbar");
+	navbar.innerHTML = `
+	<a href="/dashboard" class="home-button">Home</a>`
+});
+
 const PORT = process.env.PORT || 5001;
 app.listen(5001, () => {
     console.log("Server running on port 5001");
 });
+document.addEventListener("DOMContentLoaded", function() {
+   const links = document.querySelectorAll("a");
+   if (window.location.pathname.includes("accessibility")) {
+       links.forEach(link => link.classList.add("accessibility-link"));
+   } else {
+       links.forEach(link => link.classList.remove("accessibility-link"));
+   }
+});
+document.addEventListener("DOMContentLoaded", function() {
+   const navbar = document.getElementById("navbar");
+   navbar.innerHTML = `
+       <a href="/public\app\index.html" class="home-button">Home</a>
+   `;
+});
+
+function goBackOrDashboard() {
+    if (userWantsDashboard) {
+        window.location.href = '/public\app\index.html'; 
+    } else {
+        window.history.back();
+    }
+}
+function toggleTextarea() {
+	var sessionOptions = document.getElementById("sessionOptions");
+	var recurringTextarea = document.getElementById("recurringTextarea");
+	if (sessionOptions.value === "recurring") {
+		 recurringTextarea.style.display = "block";
+	} else {
+		 recurringTextarea.style.display = "none";
+	}
+}
+
+function toggleFilterItems(toggleElement) {
+	const filterItem = toggleElement.nextElementSibling; // Get the next sibling (the .filter-item)
+
+	if (filterItem.style.display === 'none' || filterItem.style.display === '') {
+		 filterItem.style.display = 'block'; // Show the filter items
+	} else {
+		 filterItem.style.display = 'none'; // Hide the filter items
+	}
+}
+
+// Ensure filter items are hidden on page load
+window.onload = function() {
+	const filterItems = document.querySelectorAll('.filter-item');
+	filterItems.forEach(item => {
+		 item.style.display = 'none'; // Set all filter items to hidden
+	});
+};
+
+
+
+

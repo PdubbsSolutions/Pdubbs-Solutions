@@ -11,15 +11,47 @@
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
+      <div style="margin-left: 655px;" class="navbar"><a href="/public/app/index.html">Home</a></div>
+      <div style="margin-top: -25px;" class="back" onclick="goBackOrDashboard()">Back</div>
     </head>
 <body>
    <header>
+
        <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
-               <h1 id="dashboard-text" style="text-align: center; font-size: 2rem; margin-top: -15px; padding: 0;"><span> Accessibilty</span></h1>
-          </div>
    </header>
+   <div class="accessibility-container" style="scroll-behavior: smooth; scrollbar-color: inherit; display:inline; flex-direction: column; text-align: center;max-width:550px;">
+      <h1 id="dashboard-text" style="text-align: center; font-size: 1.3rem; margin-top: -25px; padding: 0;"><span> Accessibilty Statement</span></h1><hr>
+    <div class="accesibility" style="display:inline; flex-direction: column; text-align: center;max-width:550px;">
+        <p class="content-paragraph"><br>
+          <span class="bold">PDubbs Solutions </span> is commited to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relvant accessibility standards.
+        </p>
+        <h2>Efforts to Support Accessibility</h2>
+        <p class="content-paragraph"><b>PDubbs Solutions takes the following measures to ensure accessiblity:</b></p>
+        <ul class="custom-list">
+          <li>Continuous training for our team to improve accessibility.</li>
+          <li>Conducting regular reviews and audits of our website content.</li>
+          <li>Incorporating assistive technologies, like screen readers and keyboard navigation.</li>
+        </ul><br>
+        <h2>Feedback</h2>
+        <p class="content-paragraph">We welcome your feedback on the accessibility of PDubbs Solutions. If you encounter any accessibility barriers, please contact us via <a href=contact.html>this form</a> or at pdubbssolutions@gmail.com. </p><br>
+        <h2>Conformance Status</h2>
+        <p class="content-paragraph">Our website aims too comply with WCAG 2.1 Level AA standards. We are continously working to meet these guidelines and imporve the accessibility of all our digital properties.</p>
+      </div>
+    </div>
 </body>
 <script type="text/javascript" src="/public\app\static\index.mjs"></script>
 <script type="text/javascript" src="/src\app.mjs"></script>
-<script type="text/javascript" src="/public/app/static/js/express.mjs"></script>
+<script type="text/javascript" src="/public/app/static/js/express.mjs"></script><br>
+<footer> <hr>
+  <div class="ref-buttons">
+    <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.html">Terms and Conditions</a> |
+    <a class="accessibility-link" style="font-size: 12px; text-decoration: none; color:olivedrab;" href="accessibility.html">Accessibility</a> |
+    <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
+</div>
+</div>
+<span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
+ <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
+<img style=" display:inline; left: 330px;max-width: 100px; padding: 0; max-height: 100px; ;margin-top: -20px; cursor: pointer;  z-index: -999; position:absolute;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
+</footer>
+<script src="/accessibility.js"></script>
 </html>       

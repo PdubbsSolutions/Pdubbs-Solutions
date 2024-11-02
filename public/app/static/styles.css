@@ -32,6 +32,7 @@ body{
 	color: var(--secondary-color);
 	height: 100vh;
 	position: relative;
+	overflow-y:auto;
 }
 nav{
 	display: flex;
@@ -100,6 +101,10 @@ footer div, footer span {
 	cursor: pointer;
 	color: #a8738a;
 }
+a.accessibility-link:hover{
+	color:olivedrab;
+}
+
 footer{
 	text-align: center;
 	cursor: pointer;
@@ -107,6 +112,14 @@ footer{
 	font-weight: 900;
 	max-height: 100px;
 }
+div.sources-container{
+	max-width: 600px;
+	justify-items: center;
+	vertical-align: middle;
+	align-items: center;
+	margin:0 auto;
+}
+
 .auth-buttons a {
 	text-decoration: none;
 	color: #a8738a;
@@ -145,11 +158,44 @@ footer{
 	max-width: 500px;
 	justify-self: center;
 }
+#contactForm{
+	width: 400px;display:block;justify-self: center; cursor: pointer; border: none;
+}
 section.registration{
 	display:block;
 	max-width: 500px;
 	
 }
+select{
+	cursor: pointer;
+	width: 400px;
+	justify-self:center;
+	height: 40px;
+	background-color: none;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	text-align: left;
+	margin-bottom: 10px;
+	color: grey;
+	-webkit-appearance:none;
+	-moz-appearane: none;
+	appearance: none;
+	color: grey;
+	padding: 10px;
+	
+}
+select option {
+	cursor: pointer;
+	color:grey;
+	text-align: justify;
+	background-color: white;
+}
+select:hover, select:focus{
+	box-shadow: 2px 2px 5px rgba(209, 224, 191, 0.8);
+	cursor: pointer;
+	outline:none;
+}
+
 .checkmark{
 color:#a8738a; font-size: 16px; margin-left:10px; vertical-align: middle;
 }
@@ -169,6 +215,8 @@ color:#a8738a; font-size: 16px; margin-left:10px; vertical-align: middle;
 		color: rgba(107, 135, 35, 0.5);
 		background-color: rgba(209, 214, 191, 0.089); 
 		transform: 0.3s ease;
+		text-decoration:none;
+		font-size: 18px;
   }
   .filter-item h2:hover{
 		color:#a8738a;
@@ -191,10 +239,16 @@ color:#a8738a; font-size: 16px; margin-left:10px; vertical-align: middle;
 		padding: 5px;
 		margin-bottom: 1px;
 		vertical-align: middle;
+		max-height: 70vh;
+		overflow-y: auto;
+		overflow-x: hidden;
+		width: 600px;
+		justify-self: center;
   }
   .active.filter-item{display:block;}
   .filter-item:hover{
 	cursor: pointer;
+	overflow-y:show;
   }
   .arrow {
 		display:inline-block;
@@ -234,11 +288,15 @@ form input:focus, form textarea:focus, form button:focus {
 	border-color: #888; 
 }
 
-.filter-item section {
+.filter-item-section {
 	background-color: #f1f1f1;
 	padding: 20px;
 	border-radius: 5px;
 	transition: transform 0.3s ease;
+	height: 100vh;
+	overflow:hidden;
+	align-items:enter;
+	display:flex;
 }
 .icon-label{
 	font-family: 'Nunito', sans-serif;
@@ -283,7 +341,57 @@ p#icon-label{
 	justify-content: center;
 	font-size: 14px;
 }
+.custom-list{
+	list-style-type: style none;
+	padding-left: 2px;
+	font-size: 12px;
+	text-align: justify;
+	margin-left: 148px;
+}
+.custom-list li{
+	list-style-type: none;
+	position:relative;
+	padding-left: 10px;
+}
+.custom-list li::before{
+	content:'➤';
+	color:var(--primary-color);
+	position: absolute;
+	left: -5px;
+}
 
+.content-paragraph{
+	font-size: 12px;
+	text-align: justify;
+	max-width: 500px;
+	margin: 0 auto; 
+	word-wrap: normal;
+	justify-content: center; 
+}
+h2{
+	font-size: 13px;
+	color: black;
+	margin-top: -15px;
+	padding:0;
+	margin-bottom: 2px;
+	text-decoration: none;
+	cursor: pointer;
+	text-align: left;
+}
+hr{
+	max-width: 500px;
+	margin: 0 auto;
+	height: 1px;
+	border: none;
+	background-color: #aaafb2;
+}
+span.bold{
+	color:#a8738a;
+	font-weight: bold;
+	font-size: 12px;
+	display: inline;
+
+}
  p#icon-label:hover{
 	color: #a8738a;
 	cursor: pointer;
@@ -303,6 +411,42 @@ p#icon-label{
 .filter-container{
 	overflow:hidden;
 	transition: height 0.3s ease;
+}
+div.back{
+	color:#aaafb2;
+	text-decoration:none;
+	font-size:18px;
+	background-color: white !important;
+	bottom: 0px;
+	margin-left: 85px;
+	margin-top:-25px;
+	padding:0;
+}
+div.back:hover, div.navbar:hover{
+	text-decoration:underline;
+	font-size: 19px;
+	color: #a8738a;
+	cursor: pointer;
+}
+div.navbar, div.navbar a{
+	color:#aaafb2;
+	text-decoration:none;
+	font-size: 18px;
+	text-align: right;
+	margin-right: 45px;
+	margin-top: 25px;
+	padding:0;
+	
+}
+.toppage:hover{
+	text-decoration: underline;
+	color:#a8738a;
+	font-weight: bold;
+	cursor: pointer;
+	transition: 0.1s ease;
+}
+.toppage{
+	position: absolute;
 }
 
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
