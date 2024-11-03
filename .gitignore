@@ -1,6 +1,7 @@
 # Node Modules
 node_modules/
 favicon.ico/
+.vscode/
 
 # Build output
 dist/
@@ -9,6 +10,10 @@ out/
 .tmp/
 .cache/
 
+#Front End
+dist/
+build/
+.cache/
 
 # Logs
 logs/
@@ -17,12 +22,16 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+#Firebase
+firebase-debug.log*
+public/app/static/pages/*.html
+
+
 # Environment variables
 .env.local
 .env.*.local
 .vs/
 .git/
-
 
 # Miscellaneous
 .DS_Store
@@ -36,12 +45,16 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
+*.sublime-workspace
+*.sublime-project
 
 # Operating System files
 Thumbs.db
 ehthumbs.db
 Icon?
 Desktop.ini
+*.DS_Store
+.Trash-*
 
 #config
 config/venv/
@@ -51,3 +64,32 @@ config/venv/
 my_flask_project
 my_django_project
 *.log
+
+#python for flask
+__pycache__/
+*.pyc
+instance/
+venv/
+*.pyo
+.python-version
+
+#docker
+.dockerignore
+Dockerfile
+docker-compose.yml
+
+#Cache
+*.class
+*.o
+*.out
+*.so
+
+#Temporary & Backup
+*.bak
+*.tmp
+.temp/
+.sass-cache/
+
+#Python
+coverage/
+.nyc_output/
