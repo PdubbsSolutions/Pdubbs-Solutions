@@ -1,5 +1,4 @@
 # Node Modules
-node_modules/
 favicon.ico/
 .vscode/
 
@@ -22,9 +21,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#Firebase
-firebase-debug.log*
-public/app/static/pages/*.html
 
 
 # Environment variables
