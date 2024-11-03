@@ -50,3 +50,4 @@ config/venv/
 #environments
 my_flask_project
 my_django_project
+*.log
