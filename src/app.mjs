@@ -205,6 +205,6 @@ app.get("/about", ensureAuthenticated, (_req, res) => {
 });
 
 const PORT = process.env.PORT || 5001;
-app.listen(5001, () => {
+app.listen(5000, () => {
     console.log("Server running on port 5001");
 });

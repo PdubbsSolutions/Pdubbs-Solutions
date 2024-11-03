@@ -199,6 +199,6 @@ router.post('/reset-password/:token', async (req, res) => {
 
 module.exports = router;
 const PORT = process.env.PORT || 5001;
-app.listen(5001, () => {
+app.listen(5000, () => {
     console.log("Server running on port 5001");
 });
