@@ -47,3 +47,4 @@ eval("__webpack_require__.r(__webpack_exports__);\nvar _require = require('expre
 /******/ 	
 /******/ })()
 ;
+const firebaseConfig = require('./firebaseConfig.js');

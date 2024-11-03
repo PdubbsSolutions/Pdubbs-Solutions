@@ -1,4 +1,3 @@
-
 const path = require('path');
 
 module.exports = {
@@ -32,3 +31,4 @@ module.exports = {
       ]
    }
 }
+const firebaseConfig = require('./firebaseConfig.js');

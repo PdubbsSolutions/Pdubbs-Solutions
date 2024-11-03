@@ -1,5 +1,5 @@
-const {body, validationResult} = require('express-validator');
-const PORT = 5001;
+import { body, validationResult } from 'express-validator';
+const PORT = 5000;
 
 document.addEventListener("DOMContentLoaded", function() {
 	const customRequestForm = document.querySelector("#custom-request form");
@@ -48,3 +48,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			});
 	});
 });
+const firebaseConfig = require(newFunction());
+function newFunction() {
+	return './firebaseConfig.js';
+}
+

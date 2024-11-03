@@ -6,6 +6,7 @@ const crypto = require('crypto');
 const passport = require('passport');
 const User = require('../models/User');
 require('dotenv').config();
+const firebaseConfig = require('./firebaseConfig.js');
 
 app.set("view engine", "ejs");
 app.use(express.static(publicDir));

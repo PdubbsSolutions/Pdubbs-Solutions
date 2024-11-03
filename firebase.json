@@ -1,3 +1,4 @@
+
 {
   "hosting": {
     "public": "public",
@@ -9,11 +10,11 @@
   },
   "database": {
     "host": "127.0.0.1",
-    "port": 5002
+    "port": 5000
   },
   "ui": {
     "host": "127.0.0.1",
-    "port": 5002
+    "port": 5000
   },
   "remoteconfig": {
     "template": "remoteconfig.template.json"
