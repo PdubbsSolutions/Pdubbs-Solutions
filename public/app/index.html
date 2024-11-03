@@ -4,9 +4,22 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE-edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta http-equiv="refresh" content="url=https://pdubbssolutions.ca" name="Pdubbs Solutions">
+      <link rel="canonical" href="https://pdubbssolutions.ca" name="Pdubbs Solutions">
+      <link rel="canonical" href="https://pdubbssolutions.com" name="Pdubbs Solutions">
       <meta name="google-site-verification" content="BF8pc_URLQQbba5sQgIi_MVADChvuQJk0Pci3MhcWWc" />
+      <script>
+        if (window.location.hostname === "pdubbs-final.web.app") {
+          window.location.replace("https://pdubbssolutions.ca");
+        }
+      </script>
+    <script defer src="/__/firebase/11.0.1/firebase-app-compat.js"></script>
+    <script defer src="/__firebase/11.0.1/firebase-hosting-compact.js"></script>    
+    <script defer src="/__/firebase/11.0.1/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/11.0.1/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/11.0.1/firebase-storage-compat.js"></script>
+    <script defer src="/__firebase/11.0.1/firebase-appCheck-compact.js"></script>
       <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+      <script defer src="/__/firebase/init.js?useEmulator=true"></script>
       <link rel="stylesheet"  type="text/css" href="/public/app/static/styles.css" />
       <title>Pdubbs Solutions | Dashboard</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -196,5 +209,29 @@
                         });
                     });
                 </script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                      const loadEl = document.querySelector('#load');
+                     
+                      try {
+                        let app = firebase.app();
+                        let features = [
+                          'auth', 
+                          'database', 
+                          'firestore',
+                          'functions',
+                          'messaging', 
+                          'storage', 
+                          'analytics', 
+                          'remoteConfig',
+                          'performance',
+                        ].filter(feature => typeof app[feature] === 'function');
+                        loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+                      } catch (e) {
+                        console.error(e);
+                        loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+                      }
+                    });
+                  </script>
             </body>
             </html>

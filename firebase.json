@@ -1,23 +1,20 @@
-
 {
   "hosting": {
-    "public": "public",
+    "public": "public/app",
+    "redirects": [
+      {
+        "source": "/**",
+        "destination": "https://pdubbssolutions.ca",
+        "type": 301
+      }
+    ],
     "ignore": [
       "firebase.json",
-      "**/.*",
       "**/node_modules/**"
     ]
   },
-  "database": {
-    "host": "127.0.0.1",
-    "port": 5000
-  },
-  "ui": {
-    "host": "127.0.0.1",
-    "port": 5000
-  },
+  "singleProjectMode": true,
   "remoteconfig": {
     "template": "remoteconfig.template.json"
-  },
-  "singleProjectMode": true
+  }
 }
