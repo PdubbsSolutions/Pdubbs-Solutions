@@ -89,3 +89,7 @@ docker-compose.yml
 #Python
 coverage/
 .nyc_output/
+
+#overrides
+*.ejs
+*.mjs

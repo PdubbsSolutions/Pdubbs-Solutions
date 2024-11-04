@@ -1,20 +1,27 @@
 {
   "hosting": {
-    "public": "public/app",
-    "redirects": [
-      {
-        "source": "/**",
-        "destination": "https://pdubbssolutions.ca",
-        "type": 301
-      }
-    ],
+    "public": "C:/Users/PW Admin Solutions/source/repos/Pdubbs-final",
     "ignore": [
       "firebase.json",
+      "**/.*",
       "**/node_modules/**"
     ]
   },
   "singleProjectMode": true,
   "remoteconfig": {
     "template": "remoteconfig.template.json"
+  },
+  "rules": {
+    "users": {
+      "$user_id": {
+        "name": {
+          ".validate": "newData.isString() && newData.val().length > 0"
+        },
+        "age": {
+          ".validate": "newData.isNumber() && newData.val() > 0"
+        }
+      }
+    }
   }
 }
+

@@ -36,7 +36,7 @@ listen;
 ssl;
 server_name;
 'pdubbssolutions';
-'https://pdubbs-final.web.app;'
+'pdssolutions.web.app';
 
 SSL;
 certificate;

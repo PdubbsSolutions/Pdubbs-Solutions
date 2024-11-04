@@ -1,15 +1,18 @@
 const path = require('path');
 
 module.exports = {
-    entry: './public/app/static/index.mjs',
+    devServer: {
+        host: 'localhost',
+        port: 5000
+    },
     output: {
-        filename: 'bundle.js',
-        path: path.resolve(__dirname, 'public', 'app'),
-        clean: true // Optional: clean the output directory before each build
+        path: path.resolve("C:/Users/PW Admin Solutions/source/repos/Pdubbs-final"),
+        filename: 'bundle.js'
     },
     resolve: {
         alias: {
-            firebaseapp: path.resolve(__dirname, 'C:\Users\PW Admin Solutions\source\repos\Pdubbs-final') // Use forward slashes for paths
+            firebaseapp: path.resolve(__dirname, 'source/repos/Pdubbs-final'), 
+            '@static': path.resolve(__dirname,'src/static')
         },
         extensions: ['.js', '.mjs', '.json']
     },
@@ -38,6 +41,12 @@ module.exports = {
         ]
     }
 };
+resolve: {
+    extensions: ['.js', '.jsx', '.json', 'mjs'], 
+    alias: {
+        '@static': path.resolve(__dirname, 'src/static/'),
+    },
+    mainFields: ['browser', 'module', 'main', 'index'],
+},
 
-// Import Firebase configuration at the end
 const firebaseConfig = require('./firebaseConfig.js');
