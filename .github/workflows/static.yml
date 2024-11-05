@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch: 
+  workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
@@ -20,6 +20,8 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+env:
+  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
 jobs:
   # Single deploy job since we're just deploying
@@ -37,7 +39,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           # Upload entire repository
-          path: './public/app/'
+          path: "./public/app/"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

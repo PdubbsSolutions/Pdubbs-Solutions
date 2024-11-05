@@ -2,6 +2,7 @@ import globals from "globals";
 
 
 export default [
-  {files: ["**/*.js"], languageOptions: {sourceType: "commonjs"}},
-  {languageOptions: { globals: globals.browser }},
+  { files: ["**/*.{js,mjs,ejs}"], languageOptions: { sourceType: "commonjs" } },
+  { languageOptions: { globals: globals.browser } },
 ];
+

@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "C:/Users/PW Admin Solutions/source/repos/Pdubbs-final",
+    "site": "pdssolutions.web.app",
+    "public": "public/app/",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -22,6 +23,19 @@
         }
       }
     }
+  },
+  "database": {
+    "rules": {
+      "users": {
+        "$user_id": {
+          "name": {
+            ".validate": "newData.isString() && newData.val().length > 0"
+          },
+          "age": {
+            ".validate": "newData.isNumber() && newData.val() > 0"
+          }
+        }
+      }
+    }
   }
 }
-

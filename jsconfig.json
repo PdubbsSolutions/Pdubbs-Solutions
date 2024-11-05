@@ -1,8 +1,9 @@
 {
     "compilerOptions": {
-        "module": "ESNext",
-        "moduleResolution": "bundler",
-        "target": "ES2022",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "target": "es6",
+        "baseUrl": "./",
         "jsx": "react",
         "allowImportingTsExtensions": true,
         "strict": true,
@@ -12,8 +13,7 @@
         "resolveJsonModule": true
     },
     "exclude": [
-        "node_modules",
-        "**/node_modules/*"
+        "node_modules"
     ],
     "include": [
         "src/**/*"

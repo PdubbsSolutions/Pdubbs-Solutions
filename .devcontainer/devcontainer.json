@@ -12,7 +12,10 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"ritwickdey.LiveServer"
+				"ritwickdey.LiveServer",
+				"HTMLHint.vscode-htmlhint",
+				"DigitalBrainstem.javascript-ejs-support",
+				"ecmel.vscode-html-css"
 			]
 		}
 	}

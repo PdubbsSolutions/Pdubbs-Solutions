@@ -20,7 +20,8 @@
   "description": "./public",
   "host": "https://pdubbssolutions.ca",
   "directories": {
-    "public": "public"
+    "public": "public",
+    "type": "commonjs"
   },
   "scripts": {
     "test": "firebase serve",
@@ -48,6 +49,7 @@
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
     "html-loader": "^5.1.0",
+    "prettier-eslint": "^16.3.0",
     "style-loader": "^4.0.0",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
