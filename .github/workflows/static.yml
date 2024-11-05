@@ -29,6 +29,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: self-hosted
     steps:
+      - uses: actions/javascript-action@a824008085750b8e136effc585c3cd6082bd575f
+      - uses: actions/javascript-action@v1.0.1
+      - uses: actions/javascript-action@main
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Pages
