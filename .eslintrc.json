@@ -7,11 +7,13 @@
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:import/errors",
-    "plugin:import/warnings"
+    "plugin:import/warnings",
+    "plugin:jsx-a11y/recommended"
   ],
   "plugins": [
     "react",
-    "import"
+    "import",
+    "jsx-a11y"
   ],
   "parserOptions": {
     "ecmaVersion": 2021,

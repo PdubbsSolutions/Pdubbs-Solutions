@@ -22,7 +22,7 @@
   "host": "https://pdubbssolutions.ca",
   "directories": {
     "public": "public",
-    "type": "commonjs"
+    "type": "module"
   },
   "scripts": {
     "test": "firebase serve",
