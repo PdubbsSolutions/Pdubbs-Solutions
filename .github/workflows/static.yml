@@ -20,8 +20,6 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-env:
-  FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
 
 jobs:
   # Single deploy job since we're just deploying

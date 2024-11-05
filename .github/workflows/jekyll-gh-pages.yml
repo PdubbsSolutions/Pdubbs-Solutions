@@ -1,8 +1,9 @@
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+name: Build and Deploy Jekyll Site
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main  # Adjust if your default branch is different
   workflow_dispatch:
 
 permissions:
@@ -20,15 +21,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        
       - name: Setup Pages
         uses: actions/configure-pages@v3
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
+        
+      - name: Install Ruby and Bundler
+        uses: ruby/setup-ruby@v1
         with:
-          source: ./
-          destination: ./_site
+          ruby-version: '2.7'  # Specify your required Ruby version
+
+      - name: Install Dependencies
+        run: |
+          gem install bundler
+          bundle install
+        
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --source ./ --destination ./_site
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
+        with:
+          path: ./_site
 
   deploy:
     environment:
