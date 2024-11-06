@@ -55,7 +55,6 @@ Desktop.ini
 #config
 config/venv/
 .git/index.lock
-jekyll-gh-pages.yml
 
 #environments
 my_flask_project

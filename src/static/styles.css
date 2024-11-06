@@ -281,6 +281,7 @@ form button {
 	margin:0 auto;
 	display: grid;
 	margin-left: 150px;
+	margin-top: 5px;
 }
 
 input[type="file"] {
@@ -306,6 +307,7 @@ form input:focus, form textarea:focus, form button:focus {
 	cursor: pointer;
 }
 input[type="text"],
+input[type="password"],
 input[type="email"],
 input[type="date"],
 input[type="time"],
@@ -318,7 +320,26 @@ select {
 	padding: 10px;
 	margin-top: 2px;
    margin-bottom: 2px;
+	align-items: center;
+	margin-left: 70px;
+	cursor: pointer;
 }
+
+:hover input[type="text"],
+:hover input[type="password"],
+:hover input[type="email"],
+:hover input[type="date"],
+:hover input[type="time"],
+:hover input[type="number"],
+:hover input[type="details"]
+:hover textarea,
+:hover dropdown,
+:hover select {
+	text-decoration:none;
+	background-color: none;
+} 
+
+
 section[id=custom-request],
 section[id=partnership],
 section[id=book-session],
@@ -494,6 +515,13 @@ h2{
 	margin-left: 175px;
 	margin-top: 1px;
 }	
+
+a{ color: inherit; text-decoration: none; cursor: pointer;transform: 0.3s  ease;}
+a:hover{color:var(--primary-color); text-decoration: underline; padding: 2px; transform: 0.3s  ease; }
+div.accessibility, h2#accessibilityHeading, h2#accessibilityHeading1, h2#accessibilityHeading2
+{color:black; text-align: left; margin-left:138px; display: block; padding:0; margin-top: -15px;position:absolute; }
+
+
 
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
 @import url(https://fonts.googleapis.com);
