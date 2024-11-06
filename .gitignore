@@ -27,6 +27,7 @@ yarn-error.log*
 .env.*.local
 .vs/
 .git/
+.env
 
 # Miscellaneous
 .DS_Store
@@ -85,6 +86,7 @@ docker-compose.yml
 *.tmp
 .temp/
 .sass-cache/
+.ssh
 
 #Python
 coverage/
