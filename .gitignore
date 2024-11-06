@@ -94,4 +94,4 @@ coverage/
 
 #overrides
 *.ejs
-*.mjs
+*.mjssrc/.ssh/
