@@ -18,7 +18,7 @@
      "version": "1.0.0"
    },
    "api": {
-     "baseUrl": "https://pdubbs-final.web.app",
+     "baseUrl": "https://pdssolutions.web.app",
      "timeout": 30000
    },
    "auth": {

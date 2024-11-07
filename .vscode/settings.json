@@ -1,0 +1,17 @@
+{
+   "python.analysis.extraPaths": [
+    "./src/utils",
+    "./src/ utils"
+  ],
+   "liveServer.settings.port": 5000,
+   "liveServer.settings.root": "https://pdubbs-final.web.app",
+   "liveServer.settings.host": "127.0.0.1",
+   "liveServer.settings.CustomBrowser": "chrome",
+     "liveServer.settings.proxy": {
+      "enable": true,
+      "baseUri": "https://pdubbs-final.web.app",
+      "proxyUri": "http://127.0.0.1:5000"
+  },
+"liveServer.settings.ChromeDebuggingAttachment": true,
+"typescript.tsdk": "node_modules\\typescript\\lib"
+   }

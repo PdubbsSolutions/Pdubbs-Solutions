@@ -53,7 +53,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
       Priority: ${priority}\n
       Message: ${message}`;
 
-   console.log('Email sent to pdubbssolutions#gmail.com\nSubject: ${subject}\nBody: ${body} ');
+   console.log('Email sent to pdubbssolutions@gmail.com\nSubject: ${subject}\nBody: ${body} ');
    document.getElementById('submittedName').innerText = name;
    document.getElementById('confirmationMessage').style.display = 'block';
    document.getElementById('contactForm').style.display= 'none';

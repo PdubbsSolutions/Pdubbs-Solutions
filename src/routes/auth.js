@@ -6,7 +6,6 @@ const crypto = require('crypto');
 const passport = require('passport');
 const User = require('../models/User');
 require('dotenv').config();
-const firebaseConfig = require('./firebaseConfig.js');
 
 app.set("view engine", "ejs");
 app.use(express.static(publicDir));
@@ -198,7 +197,7 @@ router.post('/reset-password/:token', async (req, res) => {
 });
 
 module.exports = router;
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 5000;
 app.listen(5000, () => {
-    console.log("Server running on port 5001");
+    console.log("Server running on port 5000");
 });

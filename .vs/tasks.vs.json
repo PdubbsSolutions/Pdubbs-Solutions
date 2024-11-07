@@ -1,0 +1,20 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "task-index",
+      "appliesTo": "public/app/index.html",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-js",
+      "appliesTo": "public/app/static/index.mjs",
+      "type": "launch"
+    },
+    {
+      "taskLabel": "task-styles",
+      "appliesTo": "public/app/static/styles.css",
+      "type": "launch"
+    }
+  ]
+}

@@ -5,7 +5,6 @@
         "target": "es6",
         "baseUrl": "./",
         "jsx": "react",
-        "allowImportingTsExtensions": true,
         "strict": true,
         "esModuleInterop": true,
         "skipLibCheck": true,

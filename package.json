@@ -1,10 +1,10 @@
 {
   "dependencies": {
+    "@visto9259/php-webpack-plugin": "^1.1.0",
     "ejs": "^3.1.10",
-    "eslint": "^9.13.0",
+    "eslint": "^8.57.1",
     "express": "^4.21.1",
     "express-validator": "^7.2.0",
-    "firebase": "^11.0.1",
     "firebase-admin": "^12.7.0",
     "firebase-tools": "^13.23.1",
     "fs": "^0.0.1-security",
@@ -12,29 +12,35 @@
     "jsonwebtoken": "^9.0.2",
     "nano": "^10.1.4",
     "nodemailer": "^6.9.16",
+    "npx": "^10.2.2",
     "php": "^1.1.0",
+    "react-scripts": "^5.0.1",
     "router": "^1.3.8",
     "ruby": "^0.6.1",
     "superstatic": "^9.0.3",
-    "vim": "^0.1.0"
+    "vim": "^0.1.0",
+    "vite-plugin-windicss": "^1.9.3",
+    "webpack": "^5.96.1",
+    "windicss": "^3.5.6",
+    "windicss-webpack-plugin": "^1.8.0"
   },
   "name": "pdubbs-solutions",
   "version": "1.0.0",
   "description": "./public",
   "host": "https://pdubbssolutions.ca",
   "directories": {
-    "public": "public",
-    "type": "module"
+    "doc": "docs",
+    "test": "test"
   },
   "scripts": {
     "test": "firebase serve",
-    "start": "webpack serve --host pdssolutions.web.app --port 3000",
+    "start": "webpack serve --host pdssolutions.web.app --port 5000",
     "build": "react-scripts build && cp -R build/* 'C:/Users/PW Admin Solutions/source/repos/Pdubbs-final",
     "postbuild": "xcopy '/src/static/  /E /I"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PdubbsSolutions/Pdubbs-Solutions.git"
+    "url": "git+https://github.com/PdubbsSolutions/Pdubbs-Solutions.git"
   },
   "keywords": [
     "pdubbs",
@@ -47,15 +53,30 @@
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
-    "eslint": "^9.13.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
     "html-loader": "^5.1.0",
     "prettier-eslint": "^16.3.0",
     "style-loader": "^4.0.0",
-    "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
-  }
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "main": "webpack.config.js",
+  "bugs": {
+    "url": "https://github.com/PdubbsSolutions/Pdubbs-Solutions/issues"
+  },
+  "homepage": "https://github.com/PdubbsSolutions/Pdubbs-Solutions#readme"
 }

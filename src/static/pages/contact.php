@@ -13,6 +13,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
       <div class="navbar"><a href="/public/app/index.php" >Home</a></div>
       <div class="back" onclick="goBackOrDashboard()">Back</div>
+      <script src="/contact.js"></script>
     </head>
     <body> 
       <?php echo "This is php code"; ?>

@@ -1,8 +1,6 @@
-const firebaseConfig = require('./firebaseConfig.js');
 const express =require('express');
 const session = require('express-session');
 const app = express();
-const PORT = 5001;
 
 app.set('view engine', 'ejs');
 app.get('profile', (req, res) =>{
@@ -11,12 +9,12 @@ app.get('profile', (req, res) =>{
     };
     res.render('profile', {user:user});
 });
-app.listen(5001, () => {
-    console.log('Server is running on port 5001');
+app.listen(5000, () => {
+    console.log('Server is running on port 5000');
 });
-pdubbs-final.web.app;
+pdubbssolutions.ca
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://pdubbs-final.web.app/");
+    res.header("Access-Control-Allow-Origin", "https://pdubbssolutions.ca/");
     res.header("Access-Control-Allow-Methods", "GET, POST, PUT");
     res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
     res.header("Access-Control-Allow-Credentials", "true");

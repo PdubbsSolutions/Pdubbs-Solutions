@@ -1,5 +1,22 @@
 const path = require('path');
-const firebaseConfig = require('./firebaseConfig.js');
+const PhpWebpackPlugin = require('php-webpack-plugin');
+const WindiCSSPlugin = require('windicss-webpack-plugin');
+
+module.exports = {
+    entry: {
+        main: 'index.php',
+        app: 'app.js',
+    },
+    plugins: [
+        [new WindiCSSPlugin()],
+        new PhpWebpackPlugin({
+        }),
+        new PhpWebpackPlugin({
+            entryPoint: 'null',
+            filename: 'scriptlists.php'
+        }),
+    ]
+}
 
 module.exports = {
     devServer: {
@@ -19,7 +36,7 @@ module.exports = {
             '@app': path.resolve(__dirname, 'public/app'),
             '@static': path.resolve(__dirname, 'src/static')
         },
-        extensions: ['.js', '.mjs', '.json']
+        extensions: ['.js', '.mjs', '.json', 'php', 'html', 'css']
     },
     mode: 'development',
     module: {
@@ -38,6 +55,10 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: ['html-loader']
+            },
+            {
+                test: /\.php$/,
+                use: ['php-loader']
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
