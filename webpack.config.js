@@ -18,23 +18,24 @@ module.exports = {
     ]
 }
 
+const newLocal = 'public/app';
 module.exports = {
     devServer: {
         host: 'localhost',
         port: 5000
     },
     output: {
-        path: path.resolve(__dirname, 'dist'), // Use 'dist' folder for bundling output
+        path: path.resolve(__dirname, 'public'), // Use 'dist' folder for bundling output
         filename: 'bundle.js',
         libraryTarget: 'commonjs'
     },
     resolve: {
         alias: {
-            firebaseapp: path.resolve(__dirname, 'source/repos/Pdubbs-final'),
+            globalThis: path.resolve(__dirname, 'source/repos/Pdubbs-final'),
             '@src': path.resolve(__dirname, 'src'),
             '@public': path.resolve(__dirname, 'public'),
-            '@app': path.resolve(__dirname, 'public/app'),
-            '@static': path.resolve(__dirname, 'src/static')
+            '@app': path.resolve(__dirname, 'app.js'),
+            '@static': path.resolve(__dirname, 'static')
         },
         extensions: ['.js', '.mjs', '.json', 'php', 'html', 'css']
     },
