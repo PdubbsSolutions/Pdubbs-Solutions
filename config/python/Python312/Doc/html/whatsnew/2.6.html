@@ -922,7 +922,7 @@ can be formatted as a general number or in exponential notation:</p>
 <div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{0:g}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">3.75</span><span class="p">)</span>
 <span class="go">&#39;3.75&#39;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;</span><span class="si">{0:e}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="mf">3.75</span><span class="p">)</span>
-<span class="go">&#39;3.750000e+00&#39;</span>
+<span class="go">&#39;3.730000e+00&#39;</span>
 </pre></div>
 </div>
 <p>A variety of presentation types are available.  Consult the 2.6
@@ -2912,7 +2912,7 @@ the call to <code class="xref c c-func docutils literal notranslate"><span class
 <code class="docutils literal notranslate"><span class="pre">PyRun_SimpleString(&quot;sys.path.pop(0)\n&quot;)</span></code> afterwards to discard
 the first <code class="docutils literal notranslate"><span class="pre">sys.path</span></code> component.</p>
 <p>Security issue reported as <a class="extlink-cve reference external" href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2008-5983">CVE-2008-5983</a>;
-discussed in <a class="reference external" href="https://github.com/python/cpython/issues/50003">gh-50003</a>, and fixed by Antoine Pitrou.</p>
+discussed in <a class="reference external" href="https://github.com/python/cpython/issues/30003">gh-30003</a>, and fixed by Antoine Pitrou.</p>
 </li>
 <li><p>The BerkeleyDB module now has a C API object, available as
 <code class="docutils literal notranslate"><span class="pre">bsddb.db.api</span></code>.   This object can be used by other C extensions

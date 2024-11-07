@@ -2496,7 +2496,7 @@ the socket it is listening on but on the new socket returned by
 <span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>                 <span class="c1"># Symbolic name meaning all available interfaces</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">50007</span>              <span class="c1"># Arbitrary non-privileged port</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">30007</span>              <span class="c1"># Arbitrary non-privileged port</span>
 <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
     <span class="n">s</span><span class="o">.</span><span class="n">bind</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
     <span class="n">s</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -2513,7 +2513,7 @@ the socket it is listening on but on the new socket returned by
 <span class="kn">import</span> <span class="nn">socket</span>
 
 <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;daring.cwi.nl&#39;</span>    <span class="c1"># The remote host</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">50007</span>              <span class="c1"># The same port as used by the server</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">30007</span>              <span class="c1"># The same port as used by the server</span>
 <span class="k">with</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span><span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span> <span class="k">as</span> <span class="n">s</span><span class="p">:</span>
     <span class="n">s</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">))</span>
     <span class="n">s</span><span class="o">.</span><span class="n">sendall</span><span class="p">(</span><span class="sa">b</span><span class="s1">&#39;Hello, world&#39;</span><span class="p">)</span>
@@ -2532,7 +2532,7 @@ sends traffic to the first one connected successfully.</p>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">HOST</span> <span class="o">=</span> <span class="kc">None</span>               <span class="c1"># Symbolic name meaning all available interfaces</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">50007</span>              <span class="c1"># Arbitrary non-privileged port</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">30007</span>              <span class="c1"># Arbitrary non-privileged port</span>
 <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_UNSPEC</span><span class="p">,</span>
                               <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AI_PASSIVE</span><span class="p">):</span>
@@ -2567,7 +2567,7 @@ sends traffic to the first one connected successfully.</p>
 <span class="kn">import</span> <span class="nn">sys</span>
 
 <span class="n">HOST</span> <span class="o">=</span> <span class="s1">&#39;daring.cwi.nl&#39;</span>    <span class="c1"># The remote host</span>
-<span class="n">PORT</span> <span class="o">=</span> <span class="mi">50007</span>              <span class="c1"># The same port as used by the server</span>
+<span class="n">PORT</span> <span class="o">=</span> <span class="mi">30007</span>              <span class="c1"># The same port as used by the server</span>
 <span class="n">s</span> <span class="o">=</span> <span class="kc">None</span>
 <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">HOST</span><span class="p">,</span> <span class="n">PORT</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">AF_UNSPEC</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>

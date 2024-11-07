@@ -6,6 +6,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
 const User = require('../config/models/User.js');
+
 require('dotenv').config();
 
 require(' ./config/passport' ) (passport);

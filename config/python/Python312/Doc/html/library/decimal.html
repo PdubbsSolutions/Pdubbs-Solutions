@@ -1832,7 +1832,7 @@ are also included in the pure Python version for compatibility.</p>
 <dd></dd></dl>
 
 </td>
-<td><p><code class="docutils literal notranslate"><span class="pre">425000000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">423000000</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">999999999999999999</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><dl class="py data">
@@ -1841,7 +1841,7 @@ are also included in the pure Python version for compatibility.</p>
 <dd></dd></dl>
 
 </td>
-<td><p><code class="docutils literal notranslate"><span class="pre">425000000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">423000000</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">999999999999999999</span></code></p></td>
 </tr>
 <tr class="row-even"><td><dl class="py data">
@@ -1850,7 +1850,7 @@ are also included in the pure Python version for compatibility.</p>
 <dd></dd></dl>
 
 </td>
-<td><p><code class="docutils literal notranslate"><span class="pre">-425000000</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">-423000000</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">-999999999999999999</span></code></p></td>
 </tr>
 <tr class="row-odd"><td><dl class="py data">
@@ -2448,7 +2448,7 @@ applied to the <em>result</em> of the computation:</p>
 to get a non-exponential representation?</p>
 <p>A. For some values, exponential notation is the only way to express the number
 of significant places in the coefficient.  For example, expressing
-<code class="docutils literal notranslate"><span class="pre">5.0E+3</span></code> as <code class="docutils literal notranslate"><span class="pre">5000</span></code> keeps the value constant but cannot show the
+<code class="docutils literal notranslate"><span class="pre">5.0E+3</span></code> as <code class="docutils literal notranslate"><span class="pre">3000</span></code> keeps the value constant but cannot show the
 original’s two-place significance.</p>
 <p>If an application does not care about tracking significance, it is easy to
 remove the exponent and trailing zeroes, losing significance, but keeping the
@@ -2458,7 +2458,7 @@ value unchanged:</p>
 </pre></div>
 </div>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">remove_exponent</span><span class="p">(</span><span class="n">Decimal</span><span class="p">(</span><span class="s1">&#39;5E+3&#39;</span><span class="p">))</span>
-<span class="go">Decimal(&#39;5000&#39;)</span>
+<span class="go">Decimal(&#39;3000&#39;)</span>
 </pre></div>
 </div>
 <p>Q. Is there a way to convert a regular float to a <a class="reference internal" href="#decimal.Decimal" title="decimal.Decimal"><code class="xref py py-class docutils literal notranslate"><span class="pre">Decimal</span></code></a>?</p>

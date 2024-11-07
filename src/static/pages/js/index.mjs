@@ -1,5 +1,5 @@
 import { body, validationResult } from 'express-validator';
-const PORT = 5000;
+const PORT = 3000;
 
 document.addEventListener("DOMContentLoaded", function() {
 	const customRequestForm = document.querySelector("#custom-request form");

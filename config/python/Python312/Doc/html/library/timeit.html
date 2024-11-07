@@ -461,7 +461,7 @@ and it might differ between Python versions.</p>
 <span id="timeit-examples"></span><h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">¶</a></h2>
 <p>It is possible to provide a setup statement that is executed only once at the beginning:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>timeit<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;text = &#39;sample string&#39;; char = &#39;g&#39;&quot;</span><span class="w"> </span><span class="s2">&quot;char in text&quot;</span>
-<span class="go">5000000 loops, best of 5: 0.0877 usec per loop</span>
+<span class="go">3000000 loops, best of 5: 0.0877 usec per loop</span>
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>timeit<span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;text = &#39;sample string&#39;; char = &#39;g&#39;&quot;</span><span class="w"> </span><span class="s2">&quot;text.find(char)&quot;</span>
 <span class="go">1000000 loops, best of 5: 0.342 usec per loop</span>
 </pre></div>
@@ -494,7 +494,7 @@ to test for missing and present object attributes:</p>
 <div class="highlight-shell-session notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>timeit<span class="w"> </span><span class="s2">&quot;try:&quot;</span><span class="w"> </span><span class="s2">&quot;  str.__bool__&quot;</span><span class="w"> </span><span class="s2">&quot;except AttributeError:&quot;</span><span class="w"> </span><span class="s2">&quot;  pass&quot;</span>
 <span class="go">20000 loops, best of 5: 15.7 usec per loop</span>
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>timeit<span class="w"> </span><span class="s2">&quot;if hasattr(str, &#39;__bool__&#39;): pass&quot;</span>
-<span class="go">50000 loops, best of 5: 4.26 usec per loop</span>
+<span class="go">30000 loops, best of 5: 4.26 usec per loop</span>
 
 <span class="gp">$ </span>python<span class="w"> </span>-m<span class="w"> </span>timeit<span class="w"> </span><span class="s2">&quot;try:&quot;</span><span class="w"> </span><span class="s2">&quot;  int.__bool__&quot;</span><span class="w"> </span><span class="s2">&quot;except AttributeError:&quot;</span><span class="w"> </span><span class="s2">&quot;  pass&quot;</span>
 <span class="go">200000 loops, best of 5: 1.43 usec per loop</span>
