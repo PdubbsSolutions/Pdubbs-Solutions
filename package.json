@@ -5,9 +5,6 @@
     "eslint": "^8.57.1",
     "express": "^4.21.1",
     "express-validator": "^7.2.0",
-    "firebase-admin": "^12.7.0",
-    "firebase-tools": "^13.23.1",
-    "fs": "^0.0.1-security",
     "https": "^1.0.0",
     "jsonwebtoken": "^9.0.2",
     "nano": "^10.1.4",
@@ -26,17 +23,15 @@
   },
   "name": "pdubbs-solutions",
   "version": "1.0.0",
-  "description": "./public",
+  "description": "./build",
   "host": "https://pdubbssolutions.ca",
   "directories": {
     "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "test": "firebase serve",
     "start": "webpack serve --host pdssolutions.web.app --port 5000",
-    "build": "react-scripts build && cp -R build/* 'C:/Users/PW Admin Solutions/source/repos/Pdubbs-final",
-    "postbuild": "xcopy '/src/static/  /E /I"
+    "build": "react-scripts build && ncp build/* /mnt/c/Users/PW\\ Admin\\ Solutions/source/repos/Pdubbs-final/build"
   },
   "repository": {
     "type": "git",
@@ -57,6 +52,7 @@
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
     "html-loader": "^5.1.0",
+    "ncp": "^2.0.0",
     "prettier-eslint": "^16.3.0",
     "style-loader": "^4.0.0",
     "webpack-cli": "^5.1.4",
@@ -78,5 +74,5 @@
   "bugs": {
     "url": "https://github.com/PdubbsSolutions/Pdubbs-Solutions/issues"
   },
-  "homepage": "https://github.com/PdubbsSolutions/Pdubbs-Solutions#readme"
+  "homepage": "https://github.com/PdubbsSolutions/Pdubbs-Solutions#index.php"
 }

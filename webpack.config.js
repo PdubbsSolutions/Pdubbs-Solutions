@@ -18,7 +18,6 @@ module.exports = {
     ]
 }
 
-const newLocal = 'public/app';
 module.exports = {
     devServer: {
         host: 'localhost',
