@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html style="overflow: hidden;" lang="en">
+<!DOCTYPE php>
+<php style="overflow: hidden;" lang="en">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,7 +17,7 @@
         <h1 style="text-align: center; position: inherit;" id="register">Registration</h1>
     </header>
     <section class="registation">
-      <p style="text-align: center;">Already have an account? <a href="/public\app\static\pages\login.html" id="login" >Login here</a></p><br>
+      <p style="text-align: center;">Already have an account? <a href="/public\app\static\pages\login.php" id="login" >Login here</a></p><br>
       <div class="register">
          <div >
             <% if (errors && errors.length > 0) { %>
@@ -49,9 +49,9 @@
       </div>
     </section>
     <footer><br>
-      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.html">Login</a> | <a href="public\app\static\pages\register.html">Register</a> | <a href="/public\app\static\pages\contact.html">Contact</a> | <a href="/public\app\static\pages\cart.html">Cart</a></div><br>
+      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.php">Login</a> | <a href="public\app\static\pages\register.php">Register</a> | <a href="/public\app\static\pages\contact.php">Contact</a> | <a href="/public\app\static\pages\cart.php">Cart</a></div><br>
       <div class="ref-buttons">
-         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.html">Terms and Conditions</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="accessibility.html">Accessibility</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
+         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.php">Terms and Conditions</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="accessibility.php">Accessibility</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
       </div>
    </div>
       <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
@@ -63,4 +63,4 @@
    <script type="text/javascript" src="/public/app/static/js/express.mjs"></script>
 
 </body>
-</html>
+</php>

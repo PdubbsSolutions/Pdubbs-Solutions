@@ -19,10 +19,11 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-      <div style="margin-left: 655px;" class="navbar"><a href="/public\index.html">Home</a></div>
+      <div style="margin-left: 655px;" class="navbar"><a href="/public\index.php">Home</a></div>
       <div style="margin-top: -25px;" class="back" onclick="goBackOrDashboard()">Back</div>
     </head>
 <body>
+  <?php echo "This is php code" ;?>
    <header>
 
        <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
@@ -48,12 +49,12 @@
     </div>
     <footer>
       <br><hr>
-      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/src\static\pages\login.ejs">Login</a> | <a href="/src\static\pages\register.ejs">Register</a> | <a href="/src\static\pages\contact.html">Contact</a> | <a href="/src\static\pages\cart.html">Cart</a></div>
+      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/src\static\pages\login.ejs">Login</a> | <a href="/src\static\pages\register.ejs">Register</a> | <a href="/src\static\pages\contact.php">Contact</a> | <a href="/src\static\pages\cart.php">Cart</a></div>
       <br>
       <div class="ref-buttons">
-         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="/src\static\pages\termsandconditions.html">Terms and Conditions</a> |
-         <a style="font-size: 12px; text-decoration: none; color:olivedrab;" href="/src\static\pages\accessibility.html">Accessibility</a> |
-         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="/src\static\pages\sources.html">Sources</a> | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/csspolicy.html">Policies &amp; Procedures</a>
+         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="/src\static\pages\termsandconditions.php">Terms and Conditions</a> |
+         <a style="font-size: 12px; text-decoration: none; color:olivedrab;" href="/src\static\pages\accessibility.php">Accessibility</a> |
+         <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="/src\static\pages\sources.php">Sources</a> | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/csspolicy.php">Policies &amp; Procedures</a>
       </div>
       <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative &amp; Project Management Services</span><br>
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>

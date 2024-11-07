@@ -1,6 +1,8 @@
 # Node Modules
 favicon.ico
 .vscode/
+.python/
+.cpython/
 
 # Build output
 dist/

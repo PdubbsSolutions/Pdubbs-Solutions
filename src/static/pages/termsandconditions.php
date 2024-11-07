@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html style="overflow: hidden;">
+<!DOCTYPE php>
+<php style="overflow: hidden;">
    <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -19,7 +19,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-      <div style="margin-left: 655px;" class="navbar"><a href="/public/index.html">Home</a></div>
+      <div style="margin-left: 655px;" class="navbar"><a href="/public/index.php">Home</a></div>
       <div style="margin-top: -25px;" class="back" onclick="goBackOrDashboard()">Back</div>
     </head>
 <body>
@@ -165,7 +165,7 @@
          </p><br>
          <h2>Privacy</h2>
          <p class="content-paragraph">
-            <span class="bold">12.1 </span>Any personal information you provide during the checkout process will be handled in accordance with our <a target="_blank" style="text-decoration: none; color:inherit; cursor: pointer;" href="/Privacy-Policy.html"> Privacy Policy</a><br>
+            <span class="bold">12.1 </span>Any personal information you provide during the checkout process will be handled in accordance with our <a target="_blank" style="text-decoration: none; color:inherit; cursor: pointer;" href="/Privacy-Policy.php"> Privacy Policy</a><br>
             <span class="bold">12.2 </span>
          </p><br>
          <h2>Changes to Terms</h2>
@@ -279,12 +279,12 @@
    <hr>
    <footer style="z-index: 999">
    <div class="ref-buttons">
-      <a style="font-size: 12px; text-decoration: none; color:olivedrab;" href="termsandconditions.html">Terms and
+      <a style="font-size: 12px; text-decoration: none; color:olivedrab;" href="termsandconditions.php">Terms and
          Conditions</a> |
       <a class="accessibility-link" style="font-size: 12px; text-decoration: none; color:#aaafb2;"
-         href="accessibility.html">Accessibility</a> |
-      <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources.html">Sources</a>
-      | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/csspolicy.html">Policies</a> | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/cssprocedure.html"> Procedures</a>
+         href="accessibility.php">Accessibility</a> |
+      <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources.php">Sources</a>
+      | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/csspolicy.php">Policies</a> | <a style="font-size:12px; text-decoration:none; color:#aaafb2;" href="/src/static/pages/cssprocedure.php"> Procedures</a>
    </div>
    <span style="text-align: center; font-weight:bold; justify-content: center; "><p>Pdubbs Solutions |
       Administrative &amp; Project Management Services </p></span><br>
@@ -292,4 +292,4 @@
       style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;">
    </div>
 </footer>
-</html>
+</php>

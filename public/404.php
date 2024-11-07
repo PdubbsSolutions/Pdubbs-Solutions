@@ -22,6 +22,7 @@
     </style>
   </head>
   <body>
+    <?php echo "This is PHP code"; ?>
     <div id="message">
       <h2>404</h2>
       <h1>Page Not Found</h1>
