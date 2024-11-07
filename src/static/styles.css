@@ -17,7 +17,6 @@
 }
 
 
-
 button[id=dashboardSubmit],
 button[id="dashboardSubmit1"],
 button[id="dashboardSubmit2"] {text-align: center;
@@ -237,7 +236,10 @@ color:#a8738a; font-size: 16px; margin-left:10px; vertical-align: middle;
 	position: inherit;
 	margin-top: 0;
 	padding: 0;
-	top: -12px;
+	margin-top: -2px;
+	text-align: center;
+	width: 70%;
+
   }
   #login:hover{ cursor: pointer; font-size: 17px; text-decoration: underline;}
   #login{top: -15px; font-size: 14px;color:#a8738a; text-decoration: none; transition: 0.3s ease; text-align: center; position:sticky}
@@ -270,6 +272,7 @@ color:#a8738a; font-size: 16px; margin-left:10px; vertical-align: middle;
 
 form textarea {
 	resize: vertical; 
+	height: 80px;
 }
 
 form button {
@@ -296,7 +299,10 @@ form input:focus, form textarea:focus, form button:focus {
 .form-container {
 	margin-top: 10px; /* Adjust if needed */
 	transition: all 0.3s ease; /* Smooth transition */
+	align-items: center;
 }
+
+form#contactForm{width: 75%; align-items: center; cursor: pointer;}
 #recurringTextarea {
 	display:none;
 	margin-top: 10px;
@@ -324,6 +330,8 @@ select {
 	margin-left: 70px;
 	cursor: pointer;
 }
+textarea[type="message"]{max-width: 70%; padding: 10px; margin-top: 2px; align-items: center; margin-left: 70px;
+cursor:pointer;}
 
 :hover input[type="text"],
 :hover input[type="password"],
@@ -352,7 +360,6 @@ section[id=message]{
 
 
 }
-
 
 
 .icon-label, .iconlabel1, .iconlabel2{
@@ -509,7 +516,6 @@ div.navbar, div.navbar a{
 
 h2{
 	display: block;
-	max-width: 500px;
 	padding: 0;
 	position: inherit;
 	margin-left: 175px;
@@ -521,7 +527,75 @@ a:hover{color:var(--primary-color); text-decoration: underline; padding: 2px; tr
 div.accessibility, h2#accessibilityHeading, h2#accessibilityHeading1, h2#accessibilityHeading2
 {color:black; text-align: left; margin-left:138px; display: block; padding:0; margin-top: -15px;position:absolute; }
 
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.heading {
+	cursor: pointer;
+	font-size: 16px;
+	color: #aaafb2;
+	text-align: center;
+	margin: 5px 0;
+	padding: 0;
+	width: 500px;
+	transition: color 0.3s;
+}
+
+.heading.active {
+	color: #a8738a;
+	text-decoration: underline;
+	transform:0.3s ease;
+}
+
+.heading:hover {
+	color: #a8738a;
+	transform: 0.3s ease;
+}
+.heading-container p { 
+	position:absolute;
+	display:none;
+	opacity:0;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	z-index: 10;
+	padding: 10px;box-shadow: 0px 4px 8px rgba(209, 224, 191, 0.8);
+	background-color: whitesmoke;
+	border-radius: 5%;
+}
+.heading-container.active p{
+	display:block;
+	opacity:1;
+	transform: translateX(0);
+
+}
+.container p {
+	display: none;
+	text-align: justify;
+	width:100%;
+	margin: 1px auto;
+	cursor: pointer;
+	position:absolute;
+	margin-bottom: 10px;
+	padding: 10px;box-shadow: 0px 4px 8px rgba(209, 224, 191, 0.8);
+	border-radius: 5%;	
+	z-index:10;
+	opacity: 100;
+	background-color: whitesmoke;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	transform: translateX(10px);
+}
+
+.container p.active {
+	display: block;
+	transition: 0.3s ease;
+	opacity: 1;
+	transform: translateX(0);
+}
+.contact-container{
+	width: 100%
+}
 
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);
 @import url(https://fonts.googleapis.com);

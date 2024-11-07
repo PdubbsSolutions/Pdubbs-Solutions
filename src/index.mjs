@@ -209,6 +209,13 @@ window.onload = function () {
 	});
 };
 
+//*logout*\\
+document.getElementById('logoutButton').addEventListener('click', () => {
+	localStorage.removeItem('authToken');
+	localStorage.removeItem('userId');
+
+	window.location.href = 'login.html';
+})
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

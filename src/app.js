@@ -174,11 +174,7 @@ app.post(' /purchase-bundle', ensureAuthenticated, async (req, res) => {
         const {companyName, email, message } = req.body;
         res.send('Partnership request received from ${companyName} ');
     });
-    const PORT = process.env.PORT || 5000;
-    app.listen(PORT, () => {
-        console.log('Server running on port ${PORT}')
-    })
-
+    
 app.get('/login', ensureAuthenticated, (_req, res) => {
 	res.sendFile(_join(__dirname,'src\static\pages\login.html'));
 });
@@ -229,3 +225,7 @@ app.get('/about', ensureAuthenticated, (_req, res) => {
 	res.sendFile(_join(__dirname, 'src\static\pages\about.html' ));
 });
 
+    const PORT = process.env.PORT || 5000;
+    app.listen(PORT, () => {
+        console.log('Server running on port ${PORT}')
+    })
