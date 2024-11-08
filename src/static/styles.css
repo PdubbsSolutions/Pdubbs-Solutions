@@ -712,16 +712,38 @@ h2#accessibilityHeading2 {
 	transform: translateX(0);
 
 }
-section[id=partnership], section[id=book-session], section[id=custom-request], textarea[id=requestDocument1], 
-textarea[id=recurringTextarea1]{
+section[id=partnership], section[id=book-session], section[id=custom-request], textarea[id=requestDocument1],  
+textarea[id=recurringTextarea1] textarea[id=otherDetailsInput1]{
 	display:inline-table;
 	margin-top: -5px;
 	margin-left: 110px;
 	width: 100%;
 	position:relative;
-	
-
 }
+
+textarea[id=message]{
+	display:block;
+	right: 50px;
+	position: relative;
+}
+
+form[id=registrationForm], form[id=loginForm]{
+	margin-left: 150px;
+	max-width: 550px;
+	display:inline-block;
+	position:relative;
+}
+form[id=contactForm]{max-width: 550px; }
+form#registrationForm input:focus,
+form#registrationForm textarea:focus,
+form#registrationForm button:focus {
+	outline: none;
+	border-color: #888;
+	border: 5px, 2px;
+	box-shadow: inherit;
+}
+input[type=checkbox][id=agreement]{ display:inline-block; left: -85px; position: absolute;}
+form#registrationForm :hover{ cursor: pointer; box-shadow: inherit;}
 .container p {
 	display: none;
 	text-align: justify;
@@ -749,6 +771,23 @@ textarea[id=recurringTextarea1]{
 
 .contact-container {
 	width: 100%
+}
+
+h1.headingText{margin-left: 120px; margin-top: -25px;}
+
+
+body, html {
+	overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+#wrapper {
+	width: 1200px; /* Fixed width for the page */
+	margin: 0 auto; /* Center the container */
+	position: relative; /* Positions stay the same */
+}
+
+.content {
+	width: 100%; /* Inside wrapper, everything is fixed */
 }
 
 @import url(https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap);

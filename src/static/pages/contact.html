@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE-edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=1200, initial-scale=1.0"/>
       <meta http-equiv="refresh" content="url=https://pdssolutions.web.app" name="Pdubbs Solutions">
       <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
       <link rel="stylesheet"  type="text/css" href="/src\static\styles.css" />
@@ -11,16 +11,16 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-      <div class="navbar"><a href="/public/app/index.html" >Home</a></div>
+      <div class="navbar"><a href="/public/index.html" >Home</a></div>
       <div class="back" onclick="goBackOrDashboard()">Back</div>
       <script src="/contact.js"></script>
     </head>
     <body> 
       
    <header>
-      <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
+      <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; left: 340px; cursor: pointer; max-height: 200px;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
   </header>
-   <div class="contact-container">
+   <div class="contact-container" id="wrapper">
       <h1 class="headingText"><span> Contact Us</span></h1>
          <form id="contactForm">
             <label for="first-name"></label>
@@ -50,8 +50,8 @@
            <lablel for="message"></lablel>
            <textarea type="message" id="message" name="message" placeholder="Enter  Message for Pdubbs Solutions here:" rows="1.3rem" required></textarea>
            <label>
-            <input  style="display:flex;  cursor: pointer; position:absolute; align-items: left;" type="checkbox" id="agreement" required><p style="font-size: 14px;  text-align: left; display:flex; position:relative; cursor: pointer;"> I,  <span id="userName"> </span>agree to be contacted by PDubbs Solutions</p></label>
-            <button style="display: block; margin-top: 30px;" type="submit">Submit</button>
+            <input type="checkbox" id="agreement" required><p style="font-size: 14px;  margin-left: 125px; text-align: right; display:inline-block; position:relative; cursor: pointer;"> I, agree to be contacted by PDubbs Solutions</p></label>
+            <button style="display: block; margin-top: 3px; margin-left: 160px;" type="submit">Submit</button>
             </form>
             <div id="confirmationMessage" style="display:none;">
                <p class="content-paragraph">thank you, <span id="submittedName"></span>! PDubbs Solutions will respond to your request within 0-2 business days.</p>
