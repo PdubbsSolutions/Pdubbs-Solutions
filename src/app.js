@@ -1,15 +1,32 @@
 
 const app = express();
-const publicDir = _join(__dirname, 'public');
-const multer = require('multer');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-const User = require('../config/models/User.js');
+const User = require('./User.js');
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const appContainer = document.getElementById('app');
+    greetUser('World');
+
+    const message = document.createElement('p');
+    message.textContent = 'Welcome to Pdubbs Solutions!';
+    appContainer.appendChild(message);
+
+    const button = document.createElement('button');
+    button.textContent = 'Submit';
+    button.addEventListener('submit', () => {
+        alert('Button clicked!');
+    });
+
+    appContainer.appendChild(button);
+})
 
 require('dotenv').config();
 
-require(' ./config/passport' ) (passport);
+require('passport' ) (passport);
 mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -150,7 +167,7 @@ app.post(' /purchase-bundle', ensureAuthenticated, async (req, res) => {
         res.send('Custom document request received from ${name}');
     });
     app.post ('/book-session', ensureAuthenticated, async (req, res) => {
-        const {email, name, date, time} = req.body;
+        const {email, name, date, time} =req.body
         let transporter = nodemailer.createTransport({
             service: 'Gmail',
             auth: {

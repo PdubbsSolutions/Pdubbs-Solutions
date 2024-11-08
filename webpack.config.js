@@ -1,44 +1,31 @@
 const path = require('path');
-const PhpWebpackPlugin = require('php-webpack-plugin');
 const WindiCSSPlugin = require('windicss-webpack-plugin');
 
 module.exports = {
-    entry: {
-        main: 'index.php',
-        app: 'app.js',
-    },
-    plugins: [
-        [new WindiCSSPlugin()],
-        new PhpWebpackPlugin({
-        }),
-        new PhpWebpackPlugin({
-            entryPoint: 'null',
-            filename: 'scriptlists.php'
-        }),
-    ]
-}
-
-module.exports = {
+    mode: 'development',  // Set this to 'production' when building for production
     devServer: {
         host: 'localhost',
         port: 5000
     },
+    entry: './src/app.js',  // Modify as per your entry point
     output: {
-        path: path.resolve(__dirname, 'public'), // Use 'dist' folder for bundling output
         filename: 'bundle.js',
-        libraryTarget: 'commonjs'
+        path: path.resolve(__dirname, 'dist')
     },
+    plugins: [
+        new WindiCSSPlugin()
+            
+    ],
     resolve: {
         alias: {
             globalThis: path.resolve(__dirname, 'source/repos/Pdubbs-final'),
-            '@src': path.resolve(__dirname, 'src'),
+            '@src': path.resolve(__dirname, '/src'),
             '@public': path.resolve(__dirname, 'public'),
             '@app': path.resolve(__dirname, 'app.js'),
-            '@static': path.resolve(__dirname, 'static')
+            '@static': path.resolve(__dirname, '/src/static')
         },
-        extensions: ['.js', '.mjs', '.json', 'php', 'html', 'css']
+        extensions: ['.js', '.mjs', '.json', '.php', '.html', '.css']
     },
-    mode: 'development',
     module: {
         rules: [
             {
