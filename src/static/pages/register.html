@@ -19,21 +19,15 @@
     <section class="registation">
       <p style="text-align: center;">Already have an account? <a href="/public\app\static\pages\login.html" id="login" >Login here</a></p><br>
       <div class="register">
-         <div style="display:none">
-            <% if (errors && errors.length > 0) { %>
-                <ul>
-                    <% errors.forEach(error => { %>
-                        <li style="color: olivedrab;"> <% = error.msg %> </li>
-                    <% }) %>
-                </ul>
-            <% } %>            
+         <div >
+     
          </div> 
         <form id="registrationForm" action="/register" method="POST"> 
          <input type="text" name="username" value="" id="username" placeholder="Username"/>
          <span id="usernameCheck" class="checkmark"  style="display:none;">✔️</span>
          <input type="email" name="email" id="email" value="" placeholder="Email Address" required/> 
          <span id="emailCheck" class="checkmark" style="display:none;">✔️</span>              
-            <input type="tel" name="phoneNumber" id="businessNumber" placeholder="Business Number" autocomplete="tel" value="" required>
+            <input type="tel" name="phoneNumber" id="businessNumber" placeholder="Business Number" autocomplete="tel" value="" required> 
             <span id="businessNumberCheck" class="checkmark" style="display:none;">✔️</span> 
             <input type="password" id="password" name="password" placeholder="Create a Password" required>
             <span id="passwordCheck" class="checkmark" style="display:none;">✔️</span>
@@ -43,23 +37,23 @@
         </form>
         <script>
            document.getElementById('registrationForm').addEventListener('submit', function(event) {
-           window.location.href= '/login.ejs';
+           window.location.href= '/login.html';
            });
         </script>
       </div>
     </section>
     <footer><br>
-      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.ejs">Login</a> | <a href="public\app\static\pages\register.ejsl">Register</a> | <a href="/public\app\static\pages\contact.html">Contact</a> | <a href="/public\app\static\pages\cart.html">Cart</a></div><br>
+      <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.html">Login</a> | <a href="public\app\static\pages\register.html">Register</a> | <a href="/public\app\static\pages\contact.html">Contact</a> | <a href="/public\app\static\pages\cart.html">Cart</a></div><br>
       <div class="ref-buttons">
          <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.html">Terms and Conditions</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="accessibility.html">Accessibility</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
       </div>
-      <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative & Project Management Services</span><br>
+      <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative &amp; Project Management Services</span><br>
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
       <img style="position: absolute; max-width: 100px; padding: 0; max-height: 100px; margin-top: -20px; cursor: pointer;  z-index: -999; align-self: center; left: 400px; position:absolute;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
    </footer>
    <script type="text/javascript" src="/public\app\static\index.mjs"></script>
-   <script type="text/javascript" src="/src\app.js"></script>
-   <script type="text/javascript" src="/public/app/static/js/express.js"></script>
+   <script type="text/javascript" src="/src\app.mjs"></script>
+   <script type="text/javascript" src="/public/app/static/js/express.mjs"></script>
 
 </body>
 </html>
