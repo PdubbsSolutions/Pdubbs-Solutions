@@ -523,7 +523,19 @@ p#icon-label {
 	left: -5px;
 }
 
-.content-paragraph {
+.content-paragraph,
+p[id=content-1],
+p[id=content-2],
+p[id=content-3],
+p[id=content-4],
+p[id=content-5],
+p[id=content-6],
+p[id=content-7],
+p[id=content-8],
+p[id=content-9],
+p[id=content-10],
+p[id=content-11]
+{
 	font-size: 12px;
 	text-align: justify;
 	max-width: 500px;
@@ -639,18 +651,43 @@ h2 {
 	margin-top: 1px;
 }
 
-a {
+a, button[id=access],
+button[id=access1],
+button[id=access2],
+button[id=access3],
+button[id=access4],
+button[id=access5],
+button[id=access6],
+button[id=access7],
+button[id=access8],
+button[id=access9],
+button[id=access10],
+button[id=access11]{
 	color: inherit;
 	text-decoration: none;
 	cursor: pointer;
 	transform: 0.3s ease;
+	background-color: inherit;
+	margin-left: 5px;
 }
 
-a:hover {
+a:hover, button#access:hover, 
+button[id=access1]:hover,
+button[id=access2]:hover,
+button[id=access3]:hover,
+button[id=access4]:hover,
+button[id=access5]:hover,
+button[id=access6]:hover,
+button[id=access7]:hover,
+button[id=access8]:hover,
+button[id=access9]:hover,
+button[id=access10]:hover,
+button[id=access11]:hover{
 	color: var(--primary-color);
 	text-decoration: underline;
 	padding: 2px;
 	transform: 0.3s ease;
+	background-color: none;
 }
 
 div.accessibility,
