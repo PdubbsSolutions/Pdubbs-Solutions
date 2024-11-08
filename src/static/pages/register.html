@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="/public/app/static/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/src/static/styles.css" />
     <title>Pdubbs Solutions | Registration</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,11 +13,11 @@
 </head>
 <body>
     <header>
-        <img style="z-index: -999; position: relative; top: 5px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px; top: 25px;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
-        <h1 style="text-align: center; position: inherit;" id="register">Registration</h1>
+        <img style="z-index: -999; position: relative; top: 5px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px; top: 5px;" src="/src/static/images/Pdubbs-Logo.jpg"  alt="logo" class="logo" onclick="goHome()" />
+        <h1 style="text-align: center; margin-left: 105px; position: absolute;" id="register">Registration</h1>
     </header>
     <section class="registation">
-      <p style="text-align: center;">Already have an account? <a href="/public\app\static\pages\login.html" id="login" >Login here</a></p><br>
+      <p style="text-align: center;">Already have an account? <a href="/public\app\static\pages\login.html" id="login" >Login here</a></p>
       <div class="register">
          <div >
      
@@ -33,7 +33,7 @@
             <span id="passwordCheck" class="checkmark" style="display:none;">✔️</span>
             <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
             <span id="password2Check" class="checkmark" style="display:none;">✔️</span>
-            <button  type="submit" onclick=>Register</button>
+            <button  style="margin-left: 170px;" type="submit" onclick=>Register</button>
         </form>
         <script>
            document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -42,18 +42,18 @@
         </script>
       </div>
     </section>
-    <footer><br>
+    <footer>
       <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/public\app\static\pages\login.html">Login</a> | <a href="public\app\static\pages\register.html">Register</a> | <a href="/public\app\static\pages\contact.html">Contact</a> | <a href="/public\app\static\pages\cart.html">Cart</a></div><br>
       <div class="ref-buttons">
          <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="termsandconditions.html">Terms and Conditions</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="accessibility.html">Accessibility</a> | <a style="font-size: 12px; text-decoration: none; color:#aaafb2;" href="sources">Sources</a>
       </div>
       <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative &amp; Project Management Services</span><br>
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
-      <img style="position: absolute; max-width: 100px; padding: 0; max-height: 100px; margin-top: -20px; cursor: pointer;  z-index: -999; align-self: center; left: 400px; position:absolute;" src="/public/app/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
+      <img style="position: absolute; max-width: 100px; padding: 0; max-height: 100px; margin-top: -20px; cursor: pointer;  z-index: -999; align-self: center; position:sticky;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
    </footer>
-   <script type="text/javascript" src="/public\app\static\index.mjs"></script>
+   <script type="text/javascript" src="src\static\index.mjs"></script>
    <script type="text/javascript" src="/src\app.mjs"></script>
-   <script type="text/javascript" src="/public/app/static/js/express.mjs"></script>
+   <script type="text/javascript" src="/src/static/js/express.mjs"></script>
 
 </body>
 </html>

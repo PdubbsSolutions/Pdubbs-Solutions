@@ -211,7 +211,7 @@
     <br />
     <div class="filter-container">
       <div class="filter-item">
-        <h2 slass="formHeader" onclick="toggleForm()">
+        <h2 class="formHeader" onclick="toggleForm()">
           Submit a Custom Request
           <span style="color: #a8738a" class="arrow">➤</span>
         </h2>
@@ -261,15 +261,15 @@
                 placeholder="Customization details"
                 required
               ></textarea
-              ><br />
+              >
               <input
                 style="cursor: pointer"
                 id="choose-file"
                 type="file"
                 name="document"
                 required
-              /><br />
-              <button id="dashboardSubmit" type="submit">
+              />
+              <button style="margin-left: 0px;" id="dashboardSubmit" type="submit">
                 Submit Custom Request
               </button>
             </form>
@@ -313,14 +313,15 @@
               /><br />
               <input type="date" name="date" required /><br />
               <input type="time" name="time" required /><br />
-              <div id="sessionOptions">
+              <div style="width: 80%; position:relative;" id="sessionOptions">
                 <select class="sessionOptions" name="sessionOptions">
                   <option value="single">Single Session</option>
                   <option value="recurring">Request Recurring Sessions</option>
                 </select>
               </div>
 
-              <button id="dashboardSubmit1" type="submit">
+              <button style="margin-left: 160px; position: relative;" 
+              id="dashboardSubmit1" type="submit">
                 Book 1:1 Zoom Session
               </button>
             </form>
@@ -364,8 +365,8 @@
                 placeholder="Partnership Details"
                 required
               ></textarea
-              ><br />
-              <button id="dashboardSubmit2" type="submit">
+              >
+              <button  style="margin-left: 200px; margin-top: 2px; position:relative;" id="dashboardSubmit2" type="submit">
                 Submit Partnership Request
               </button>
             </form>
