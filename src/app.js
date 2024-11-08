@@ -3,9 +3,9 @@ const app = express();
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
-const User = require('./User.js');
+const User = require('./user.js');
 
-
+const path = require('path');
 
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app');

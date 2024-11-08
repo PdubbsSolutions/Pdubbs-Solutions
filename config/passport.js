@@ -1,16 +1,25 @@
 const LocalStrategy = require('passport-local').Strategy;
-const User = require('../models/User');
+const webpack = require('webpack');
+
+module.exports = {
+    plugins: [
+        new webpack.IgnorePlugin({
+            resourceRegExp: /passport/,
+            contextRegExp: /node_modules/
+        })
+    ]
+};
 
 module.exports = function (passport) {
    passport.serializeUser((user, done) => {
       done(null, user.id);
    });
    passport.deserializeUser((user, done) => {
-      User.findById(id, (err, user) => done(err, user));
+      user.findById(id, (err, user) => done(err, user));
    });
    passport.use(
       new LocalStrategy({ usernameField: 'email', }, (email, password, done) => {
-         User.findOne({ email: email}, (err, user) => {
+         user.findOne({ email: email}, (err, user) => {
             if (err) return done (err);
             if (!user) {
                return done(null, false, { message: 'No user found with that email' });

@@ -1,6 +1,32 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 
+const path = require('path');
+
+module.exports = {
+  // Other configurations...
+  resolve: {
+   fallback: {
+       fs: false,
+       net: false,
+       tls: false,
+       http: false,
+       https: true,
+       zlib: false,
+       stream: false,
+       crypto: false,
+       path: false,
+       os: false,
+       assert: false,
+       buffer: false,
+       util: false,
+       child_process: false,
+       /* Add more as needed */
+   }
+}
+}
+
+
 const UserSchema = new mongoose.Schema({
    username: {
       type: String,
