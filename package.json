@@ -23,7 +23,6 @@
     "superstatic": "^9.0.3",
     "vim": "^0.1.0",
     "vite-plugin-windicss": "^1.9.3",
-    "webpack": "^5.96.1",
     "windicss": "^3.5.6",
     "windicss-webpack-plugin": "^1.8.0"
   },
@@ -37,7 +36,7 @@
   },
   "scripts": {
     "start": "webpack serve --open",
-    "build": "webpack --mode production",
+    "build": "webpack",
     "main": "app.js"
   },
   "repository": {
@@ -62,6 +61,7 @@
     "ncp": "^2.0.0",
     "prettier-eslint": "^16.3.0",
     "style-loader": "^4.0.0",
+    "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0"
   },
