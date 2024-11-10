@@ -12,9 +12,9 @@
 	}
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 1024px) {
 	body {
-		font-size: 16px;
+		font-size: 12px;
 	}
 }
 
@@ -45,6 +45,8 @@ body {
 	height: 100vh;
 	position: relative;
 	overflow-y: auto;
+	flex-shrink: 0;
+	flex-grow: 1;
 }
 
 nav {
@@ -137,6 +139,9 @@ footer {
 	font-weight: 900;
 	max-height: 100px;
 	font-family: 'Nunito', sans-serif;
+	margin-top: -40px;
+	align-content: center;
+	position:relative;
 }
 
 div.sources-container {
@@ -467,7 +472,7 @@ textarea[type="message"] {
 }
 
 .icon-container {
-	margin-top: 100px;
+	margin-top: 60px;
 	display: -webkit-inline-flex;
 	position: absolute;
 	gap: 20px;
@@ -524,6 +529,7 @@ p#icon-label {
 }
 
 .content-paragraph,
+#hoverable,
 p[id=content-1],
 p[id=content-2],
 p[id=content-3],
@@ -542,7 +548,7 @@ p[id=content-11]
 	margin: 0 auto;
 	word-wrap: normal;
 	justify-content: center;
-}
+	color: light-grey}
 
 h2 {
 	font-size: 13px;
@@ -596,7 +602,10 @@ p#icon-label:hover {
 	margin-left: -50px;
 	display:block;
 	width: 90%;
+	margin-top: 0;
+	top: -30px;
 	position:relative;
+	
 }
 
 div.back {
@@ -651,7 +660,7 @@ h2 {
 	margin-top: 1px;
 }
 
-a, button[id=access],
+ button[id=access],
 button[id=access1],
 button[id=access2],
 button[id=access3],
@@ -668,11 +677,11 @@ button[id=access11]{
 	cursor: pointer;
 	transform: 0.3s ease;
 	background-color: inherit;
-	margin-left: 5px;
+	margin-left: 145px; margin-top: 5px;color:#a8738a; font-weight: bold; cursor: pointer; padding:0;  position:absolute;
 }
 
-a:hover, button#access:hover, 
-button[id=access1]:hover,
+a:hover, #access1:hover,
+button#access1:hover,
 button[id=access2]:hover,
 button[id=access3]:hover,
 button[id=access4]:hover,
@@ -683,11 +692,11 @@ button[id=access8]:hover,
 button[id=access9]:hover,
 button[id=access10]:hover,
 button[id=access11]:hover{
-	color: var(--primary-color);
+	color: #a8738a;
 	text-decoration: underline;
-	padding: 2px;
+	padding: 0px;
 	transform: 0.3s ease;
-	background-color: none;
+	background-color: transparent;
 }
 
 div.accessibility,

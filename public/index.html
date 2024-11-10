@@ -35,12 +35,12 @@
     <script src="/src/app.js"></script>
 
   </head>
-  <header>
+  <header style="margin-top:0px; flex-shrink: 0; flex-grow: 1;">
     <img
       style="
         z-index: -999;
         position: relative;
-        top: 15px;
+        top: -5px;
         max-width: 200px;
         padding: 0;
         display: block;
@@ -60,7 +60,7 @@
             <div class="icons" onclick="goToPage(cart.php)">
               <script src="https://cdn.lordicon.com/lordicon.js"></script>
               <lord-icon
-                src="/src\static\pages\js\Shopping_cart_custom_icon.json"
+                src="/src/static/pages/js\Shopping_cart_custom_icon.json"
                 trigger="hover"
                 colors="primary:#aaafb2,secondary:#a8738a"
                 style="width: 55px; height: 55px; cursor: pointer"
@@ -91,7 +91,7 @@
         style="
           text-align: center;
           font-size: 2rem;
-          margin-top: -35px;
+          margin-top: -55px;
           padding: 0;
           max-width: 100%;
           position: absolute;
@@ -100,18 +100,18 @@
       </h1>
     </div>
   </header>
-  <body>
+  <body style="overflow:hidden;">
    
     <nav>
       <div class="icon-container">
         <div class="dashboard-icons">
           <div
             class="icons"
-            onclick="goToPage('src\static\pages\products.php')"
+            onclick="goToPage('src/static/pages/products.php')"
           >
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
-              src="/src\static\pages\js\products_custom_icon.json"
+              src="/src/static/pages/js\products_custom_icon.json"
               trigger="hover"
               colors="primary:#a8738a,secondary:#aaafb2"
               style="width: 65px; height: 60px; top: 5px; cursor: pointer"
@@ -125,7 +125,7 @@
         <div class="dashboard-icons">
           <div
             class="icons"
-            onclick="goToPage('src\static\pages\contact.php')"
+            onclick="goToPage('src/static/pages/contact.php')"
           >
             <script src="https://cdn.lordicon.com/lordicon.js"></script>
             <lord-icon
@@ -143,11 +143,11 @@
         <div class="dashboard-icons">
           <div
             class="icons"
-            onclick="goToPage('/src\static\pages\projects.php')"
+            onclick="goToPage('/src/static/pages/projects.php')"
           >
-            <script src="/src\static\pages\js\Folder open_custom_icon.json"></script>
+            <script src="/src/static/pages/js\Folder open_custom_icon.json"></script>
             <lord-icon
-              src="/src\static\pages\js\Folder open_custom_icon.json"
+              src="/src/static/pages/js\Folder open_custom_icon.json"
               trigger="hover"
               colors="primary:#aaafb2,secondary:#a8738a"
               style="
@@ -169,9 +169,9 @@
             class="icons"
             onclick="goToPage('$reports.php')"
           >
-            <script src="/src\static\pages\js\Bar graph_custom_icon.json"></script>
+            <script src="/src/static/pages/js\Bar graph_custom_icon.json"></script>
             <lord-icon
-              src="/src\static\pages\js\Bar graph_custom_icon.json"
+              src="/src/static/pages/js\Bar graph_custom_icon.json"
               trigger="hover"
               colors="primary:#a8738a;"
               style="width: 60px; height: 60px; cursor: pointer"
@@ -185,11 +185,11 @@
         <div class="dashboard-icons">
           <div
             class="icons"
-            onclick="goToPage('/src\static\pages\templates.php')"
+            onclick="goToPage('/src/static/pages/templates.php')"
           >
-            <script src="/src\static\pages\js\templates_custom_icon.json"></script>
+            <script src="/src/static/pages/js\templates_custom_icon.json"></script>
             <lord-icon
-              src="/src\static\pages\js\templates_custom_icon.json"
+              src="/src/static/pages/js\templates_custom_icon.json"
               trigger="hover"
               colors="primary:#a8738a,secondary:#aaafb2"
               style="width: 60px; height: 60px; cursor: pointer"
@@ -209,169 +209,171 @@
     </nav>
     <br /><br /><br /><br /><br />
     <br />
-    <div class="filter-container">
-      <div class="filter-item">
-        <h2 class="formHeader" onclick="toggleForm()">
-          Submit a Custom Request
-          <span style="color: #a8738a" class="arrow">➤</span>
-        </h2>
-        <section
-          id="custom-request"
-          class="form-container"
-          style="display: none"
-        >
-          <div id="requestDocument" class="form-container">
-            <form
-              action="/requestDocument"
-              method="POST"
-              enctype="multipart/form-data"
-            >
-              <input
-                type="text"
-                name="first-name"
-                autocomplete="given-name"
-                placeholder="First Name"
-                required
-              /><br />
-              <input
-                type="text"
-                name="last-name"
-                autocomplete="family-name"
-                placeholder="Last Name"
-                required
-              /><br />
-              <input
-                type="number"
-                autocomplete="tel"
-                name="phoneNumber"
-                placeholder="Phone Number"
-                required
-              /><br />
-              <input
-                type="email"
-                autocomplete="email"
-                name="email"
-                placeholder="Email Address"
-                required
-              /><br />
-              <textarea
-                style="width: 70%"
-                id="requestDocument1"
-                name="details"
-                placeholder="Customization details"
-                required
-              ></textarea
+    <div class="accordion" id="accordion">
+      <div class="filter-container accordion" id="accordion1">
+        <div class="filter-item collapse show" id="mutliCollapse1" aria-labelledby="formHeader" data-parent="accordion1">
+          <h2 class="formHeader" onclick="toggleForm()">
+            Submit a Custom Request
+            <span style="color: #a8738a" class="arrow">➤</span>
+          </h2>
+          <section
+            id="custom-request"
+            class="form-container"
+            style="display: none"
+          >
+            <div id="requestDocument" class="form-container">
+              <form
+                action="/requestDocument"
+                method="POST"
+                enctype="multipart/form-data"
               >
-              <input
-                style="cursor: pointer"
-                id="choose-file"
-                type="file"
-                name="document"
-                required
-              />
-              <button style="margin-left: 0px;" id="dashboardSubmit" type="submit">
-                Submit Custom Request
-              </button>
-            </form>
-          </div>
-        </section>
+                <input
+                  type="text"
+                  name="first-name"
+                  autocomplete="given-name"
+                  placeholder="First Name"
+                  required
+                /><br />
+                <input
+                  type="text"
+                  name="last-name"
+                  autocomplete="family-name"
+                  placeholder="Last Name"
+                  required
+                /><br />
+                <input
+                  type="number"
+                  autocomplete="tel"
+                  name="phoneNumber"
+                  placeholder="Phone Number"
+                  required
+                /><br />
+                <input
+                  type="email"
+                  autocomplete="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                /><br />
+                <textarea
+                  style="width: 70%"
+                  id="requestDocument1"
+                  name="details"
+                  placeholder="Customization details"
+                  required
+                ></textarea
+                >
+                <input
+                  style="cursor: pointer"
+                  id="choose-file"
+                  type="file"
+                  name="document"
+                  required
+                />
+                <button style="margin-left: 0px;" id="dashboardSubmit" type="submit">
+                  Submit Custom Request
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="filter-container">
-      <div class="filter-item">
-        <h2 class="formHeader1" onclick="toggleForm()">
-          Book a 1:1 Zoom Session
-          <span style="color: #a8738a" class="arrow">➤</span>
-        </h2>
-        <section id="book-session" class="form-container" style="display: none">
-          <div id="requestSession">
-            <form
-              action="/requestSession"
-              method="POST"
-              enctype="multipart/form-data"
-            >
-              <input
-                type="text"
-                name="first-name"
-                autocomplete="given-name"
-                placeholder="First Name"
-                required
-              /><br />
-              <input
-                type="text"
-                name="last-name"
-                autocomplete="family-name"
-                placeholder="Last Name"
-                required
-              /><br />
-              <input
-                type="email"
-                autocomplete="email"
-                name="email"
-                placeholder="Email Address"
-                required
-              /><br />
-              <input type="date" name="date" required /><br />
-              <input type="time" name="time" required /><br />
-              <div style="width: 80%; position:relative;" id="sessionOptions">
-                <select class="sessionOptions" name="sessionOptions">
-                  <option value="single">Single Session</option>
-                  <option value="recurring">Request Recurring Sessions</option>
-                </select>
-              </div>
+      <div class="filter-container accordion" id="accordion2">
+        <div class="filter-item collapse" id="mutliCollapse2" aria-labelledby="formHeader1" data-parent="accordion2">
+          <h2 class="formHeader1" onclick="toggleForm()">
+            Book a 1:1 Zoom Session
+            <span style="color: #a8738a" class="arrow">➤</span>
+          </h2>
+          <section id="book-session" class="form-container" style="display: none; flex-direction: column;">
+            <div id="requestSession">
+              <form
+                action="/requestSession"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <input
+                  type="text"
+                  name="first-name"
+                  autocomplete="given-name"
+                  placeholder="First Name"
+                  required
+                /><br />
+                <input
+                  type="text"
+                  name="last-name"
+                  autocomplete="family-name"
+                  placeholder="Last Name"
+                  required
+                /><br />
+                <input
+                  type="email"
+                  autocomplete="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                /><br />
+                <input type="date" name="date" required /><br />
+                <input type="time" name="time" required /><br />
+                <div style="width: 80%; position:relative;" id="sessionOptions">
+                  <select class="sessionOptions" name="sessionOptions">
+                    <option value="single">Single Session</option>
+                    <option value="recurring">Request Recurring Sessions</option>
+                  </select>
+                </div>
 
-              <button style="margin-left: 160px; position: relative;" 
-              id="dashboardSubmit1" type="submit">
-                Book 1:1 Zoom Session
-              </button>
-            </form>
-          </div>
-        </section>
+                <button style="margin-left: 160px; position: relative;" 
+                id="dashboardSubmit1" type="submit">
+                  Book 1:1 Zoom Session
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="filter-container">
-      <div class="filter-item">
-        <h2 class="formHeader2" onclick="togglePartnershipForm()">
-          Request a Client &amp; Vendor Partnership
-          <span style="color: #a8738a" class="arrow"> ➤ </span>
-        </h2>
-        <section id="partnership" class="form-container" style="display: none">
-          <div id="requestPartnership">
-            <form action="/requestPartnership" method="POST">
-              <input
-                type="text"
-                autocomplete="organization"
-                name="companyName"
-                placeholder="Company Name"
-                required
-              /><br />
-              <input
-                type="text"
-                autocomplete="street-address"
-                name="companyAddress"
-                placeholder="Provide your Business Address"
-                required
-              /><br />
-              <input
-                type="email"
-                autocomplete="email"
-                name="email"
-                placeholder="Email Address"
-                required
-              /><br />
-              <textarea
-                id="recurringTextarea1"
-                name="message"
-                placeholder="Partnership Details"
-                required
-              ></textarea
-              >
-              <button  style="margin-left: 200px; margin-top: 2px; position:relative;" id="dashboardSubmit2" type="submit">
-                Submit Partnership Request
-              </button>
-            </form>
-          </div>
-        </section>
+      <div class="filter-container accordion" id="accordion3">
+        <div class="filter-item collapsed" id="mutliCollapse3" aria-labelledby="formHeader2" data-parent="accordion3">
+          <h2 class="formHeader2" onclick="togglePartnershipForm()">
+            Request a Client &amp; Vendor Partnership
+            <span style="color: #a8738a" class="arrow"> ➤ </span>
+          </h2>
+          <section id="partnership" class="form-container" style="display: none">
+            <div id="requestPartnership">
+              <form action="/requestPartnership" method="POST">
+                <input
+                  type="text"
+                  autocomplete="organization"
+                  name="companyName"
+                  placeholder="Company Name"
+                  required
+                /><br />
+                <input
+                  type="text"
+                  autocomplete="street-address"
+                  name="companyAddress"
+                  placeholder="Provide your Business Address"
+                  required
+                /><br />
+                <input
+                  type="email"
+                  autocomplete="email"
+                  name="email"
+                  placeholder="Email Address"
+                  required
+                /><br />
+                <textarea
+                  id="recurringTextarea1"
+                  name="message"
+                  placeholder="Partnership Details"
+                  required
+                ></textarea
+                >
+                <button  style="margin-left: 200px; margin-top: 2px; position:relative;" id="dashboardSubmit2" type="submit">
+                  Submit Partnership Request
+                </button>
+              </form>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
     <footer>
@@ -380,28 +382,28 @@
         style="display: inline; margin-top: 0px; text-decoration: none"
         class="auth-buttons"
       >
-        <a href="/src\static\pages\login.html">Login</a> |
-        <a href="/src\static\pages\register.html">Register</a> |
-        <a href="/src\static\pages\contact.php">Contact</a> |
-        <a href="/src/static/pages/cart.php">Cart</a>
+        <a href="/src/static/pages/login.html">Login</a> |
+        <a href="/src/static/pages/register.html">Register</a> |
+        <a href="/src/static/pages/contact.html">Contact</a> |
+        <a href="/src/static/pages/cart.html">Cart</a>
       </div>
       <br />
       <div class="ref-buttons">
         <a
           style="font-size: 12px; text-decoration: none; color: #aaafb2"
-          href="/src\static\pages\termsandconditions.html"
+          href="/src/static/pages/termsandconditions.html"
           >Terms and Conditions</a
         >
         |
         <a
           style="font-size: 12px; text-decoration: none; color: #aaafb2"
-          href="/src\static\pages\accessibility.html"
+          href="/src/static/pages/accessibility.html"
           >Accessibility</a
         >
         |
         <a
           style="font-size: 12px; text-decoration: none; color: #aaafb2"
-          href="/src\static\pages\sources.html"
+          href="/src/static/pages/sources.html"
           >Sources</a
         >
         |
@@ -446,7 +448,7 @@
     </footer>
     <script type="text/javascript" src="/src/index.mjs"></script>
     <script type="text/javascript" src="/src/app.js"></script>
-    <script type="text/javascript" src="/src\static\pages\js\express.js"></script>
+    <script type="text/javascript" src="/src/static/pages/js\express.js"></script>
     <script>
       function toggleTextarea() {
         var bookSession = document.getElementById("recurringTextarea");

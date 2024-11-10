@@ -194,56 +194,73 @@ app.post(' /purchase-bundle', ensureAuthenticated, async (req, res) => {
     });
     
 app.get('/login', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname,'src\static\pages\login.html'));
+	res.sendFile(_join(__dirname,'/src/static/pages/login.html'));
 });
 
 app.get('/register', ensureAuthenticated, ( _req, res) => {
-	res.sendFile(_join(__dirname,'src\static\pages\register.html' )); 
+	res.sendFile(_join(__dirname,'/src/static/pages/register.html' )); 
 });
 
 app.get('/templates', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\templates.html'));
+	res.sendFile(_join(__dirname, '/src/static/pages/templates.html'));
 });
 
 app.get('/accessibility', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\accessibility.html'));
+	res.sendFile(_join(__dirname, '/src/static/pages/accessibility.html'));
 })
 app.get('/checkout', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname,'src\static\pages\checkout.html'));
+	res.sendFile(_join(__dirname,'/src/static/pages/checkout.html'));
 });
 app.get('/products', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\products.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/products.html' ));
 });
 
 app.get('/Privacy Policy', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\privacypolicy.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/csspolicy.html' ));
+});
+app.get('/Procedures', ensureAuthenticated, (_req, res) => {
+	res.sendFile(_join(__dirname, '/src/static/pages/cssprocedures.html' ));
 });
 
 app.get('/projects', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\projects.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/projects.html' ));
 });
 
 app.get('/reports', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\reports.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/reports.html' ));
 });
 
 app.get('/logout', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\logout.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/logout.html' ));
 });
 
 app.get('/contact', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\contact.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/contact.html' ));
 });
 
 app.get('/sources', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\sources.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/sources.html' ));
 });
 
 app.get('/about', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, 'src\static\pages\about.html' ));
+	res.sendFile(_join(__dirname, '/src/static/pages/about.html' ));
 });
 
-    const PORT = process.env.PORT || 5000;
+$('#multicollapse1').on()
+
+
+const hoverable = document.getElementById('hoverable');
+hoverable.addEventListener('mouseover', () => {
+	hoverable.style.backgroundColor ='transparent';
+	hoverable.style.textDecoration='none';
+	hoverable.style.cursor='pointer;'
+});
+hoverable.addEventListener('mouseout', () => {
+	hoverable.style.backgroundColor='transparent';
+	hoverable.style.textDecoration='none;'
+	
+})
+    const PORT = process.env.PORT || 3000
     app.listen(PORT, () => {
         console.log('Server running on port ${PORT}')
     })
