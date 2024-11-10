@@ -758,15 +758,17 @@ h2#accessibilityHeading2 {
 	transform: translateX(0);
 
 }
-section[id=partnership], section[id=book-session], section[id=custom-request], textarea[id=requestDocument1],  
-textarea[id=recurringTextarea1] textarea[id=otherDetailsInput1]{
+section[id=partnership], section[id=book-session], section[id=custom-request], textarea[id=requestDocument1],  textarea[id=recurringTextarea1] textarea[id=otherDetailsInput1]{
 	display:inline-table;
 	margin-top: -5px;
-	margin-left: 110px;
-	width: 100%;
+	margin-left: 150px;
+	width: 85%;
 	position:relative;
 }
-
+select#sessionOption1{
+	width:100%;
+	position:relative;
+}
 textarea[id=message]{
 	display:block;
 	right: 50px;

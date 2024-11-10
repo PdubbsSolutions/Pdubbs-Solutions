@@ -105,12 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (header) header.textContent = "Pdubbs Solutions";
 
 	// Handle button click
-	const button = document.querySelector('button');
-	if (button) {
-		button.addEventListener('click', () => {
-			alert('Button Clicked!');
-		});
-	}
+
 
 	// Form validation for name
 	const form = document.querySelector('form');

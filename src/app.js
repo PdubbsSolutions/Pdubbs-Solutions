@@ -64,10 +64,10 @@ function ensureAuthenticated(req, res, next) {
     req.flash('error_msg', 'Please log in to view that resource');
     res.redirect('/login');
 }
-app.get(' / ', (req, res) => {
+app.get(' / ', (_req, res) => {
     res.render('index');
 });
-app.get('/register', (req, res) => {
+app.get('/register', (_req, res) => {
     res.render('register');
 });
 app.post(' /register', async (req, res) => {
@@ -122,7 +122,7 @@ app.post(' /register', async (req, res) => {
         }
     }
 });
-    app.get('/login', (req, res) => {
+    app.get('/login', (_req, res) => {
         res.render('login');
     });
     
@@ -181,7 +181,7 @@ app.post(' /purchase-bundle', ensureAuthenticated, async (req, res) => {
             subject: 'Zoom 1:1 Session Booking',
             text: 'Thank you ${name}, you have booked a session for ${date} at ${time}.'
         };
-        transporter .sendMail(mailOptions, (error, info) => {
+        transporter .sendMail(mailOptions, (error, _info) => {
             if (error) {
                 return res.status(500) .send('Error booking session');
             }
@@ -246,20 +246,30 @@ app.get('/about', ensureAuthenticated, (_req, res) => {
 	res.sendFile(_join(__dirname, '/src/static/pages/about.html' ));
 });
 
-$('#multicollapse1').on()
 
-
-const hoverable = document.getElementById('hoverable');
-hoverable.addEventListener('mouseover', () => {
-	hoverable.style.backgroundColor ='transparent';
-	hoverable.style.textDecoration='none';
-	hoverable.style.cursor='pointer;'
+function toggleOptions(event) {
+    const selectElement = document.getElementById("sessionOptions1");
+    if (!selectElement.classList.contains("expanded")); {
+        selectElement.classList.add("expanded");
+}
+event.stopPropagation();
+}
+document.getElementById("sessionOptions1").addEventListener("change", function() {
+    this.classList.remove("expanded");
 });
-hoverable.addEventListener('mouseout', () => {
-	hoverable.style.backgroundColor='transparent';
-	hoverable.style.textDecoration='none;'
-	
-})
+
+function toggleInput(event){
+    const  inputElement = document.getElementById("multiCollapse1");
+    if (!inputElement.classList.contains("expanded")); {
+        inputElement.classList.add("expanded");
+    }
+    event.stopPropagation();
+}
+document.getElementById("multiCollapse1").addEventListener("click", function() {
+    this.classList.remove("expanded");
+    
+  });
+
     const PORT = process.env.PORT || 3000
     app.listen(PORT, () => {
         console.log('Server running on port ${PORT}')
