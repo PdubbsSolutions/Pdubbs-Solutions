@@ -258,6 +258,7 @@ document.getElementById("sessionOptions1").addEventListener("change", function()
     this.classList.remove("expanded");
 });
 
+  
 function toggleInput(event){
     const  inputElement = document.getElementById("multiCollapse1");
     if (!inputElement.classList.contains("expanded")); {

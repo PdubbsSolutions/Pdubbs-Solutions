@@ -781,7 +781,7 @@ form[id=registrationForm], form[id=loginForm]{
 	display:inline-block;
 	position:relative;
 }
-form[id=contactForm]{max-width: 550px; }
+
 form#registrationForm input:focus,
 form#registrationForm textarea:focus,
 form#registrationForm button:focus {
@@ -790,7 +790,7 @@ form#registrationForm button:focus {
 	border: 5px, 2px;
 	box-shadow: inherit;
 }
-input[type=checkbox][id=agreement]{ display:inline-block; left: -85px; position: absolute;}
+[id=agreement]{ display:inline-block; left: -85px; position: absolute;}
 form#registrationForm :hover{ cursor: pointer; box-shadow: inherit;}
 .container p {
 	display: none;
@@ -809,7 +809,10 @@ form#registrationForm :hover{ cursor: pointer; box-shadow: inherit;}
 	transition: opacity 0.3s ease, transform 0.3s ease;
 	transform: translateX(10px);
 }
-
+input[type=checkbox]{
+	margin-left: -40px;
+	
+}
 .container p.active {
 	display: block;
 	transition: 0.3s ease;
@@ -821,7 +824,7 @@ form#registrationForm :hover{ cursor: pointer; box-shadow: inherit;}
 	width: 100%
 }
 
-h1.headingText{margin-left: 120px; margin-top: -25px;}
+h1.headingText{margin-left: 20px; margin-top: -25px;}
 
 
 body, html {
@@ -829,8 +832,9 @@ body, html {
 }
 
 #wrapper {
-	width: 1200px; /* Fixed width for the page */
-	margin: 0 auto; /* Center the container */
+	width: 750px; /* Fixed width for the page */
+	margin-left: 130px;/* Center the container */
+	align-content: center;
 	position: relative; /* Positions stay the same */
 }
 
