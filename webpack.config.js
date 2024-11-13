@@ -9,6 +9,8 @@ someFunction();
 import { anotherFunction } from './src/index.mjs';
 anotherFunction(); 
 
+config()
+
 export default {
   entry: './src/app.js',
   output: {
