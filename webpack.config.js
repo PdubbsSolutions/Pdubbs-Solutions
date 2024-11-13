@@ -1,34 +1,20 @@
-const { IPv4 } = require('ipaddr.js');
 const path = require('path');
-const targetPath = resolvePath(base, path);
-
-if (!isChildPath(resolveRealPath(base), resolveRealPath(targetPath))) {
-    throw new NotAllowedError(
-      'Relative path is not allowed to refer to a directory outside its parent',
-    );
-  }
 
 module.exports = {
-  entry: {
-    main: './src/index.js',
-    app: './src/app.js',
-    user: './src/user.js',
-  },
+  entry: './app.js',
   devMiddleware: {
     writeToDisk: true,
   },
   getFilenameFromUrl(url) {
-    const publicPath = public
+    const publicPath = '/public';
     const filePath = url.replace(publicPath, '');
-    return path.join(outputPath, filePath);
+    return path.join(__dirname, 'src/static', filePath);
   },
-
   output: {
-    filename: '[name].bundle.js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, 'src/static'),
   },
   mode: 'development',
-  
   module: {
     rules: [
       {
@@ -46,11 +32,10 @@ module.exports = {
   devServer: {
     static: {
       directory: path.join(__dirname, 'public'),
-      options:"local-IPv4"
     },
     compress: true,
     port: 5000,
     open: true,
-    host: true,
+    host: 'localhost',
   },
 };
