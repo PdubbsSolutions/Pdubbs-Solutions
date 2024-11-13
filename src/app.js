@@ -192,60 +192,93 @@ app.post(' /purchase-bundle', ensureAuthenticated, async (req, res) => {
         const {companyName, email, message } = req.body;
         res.send('Partnership request received from ${companyName} ');
     });
+
+    const express = require('express');
     
-app.get('/login', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname,'/src/static/pages/login.html'));
-});
-
-app.get('/register', ensureAuthenticated, ( _req, res) => {
-	res.sendFile(_join(__dirname,'/src/static/pages/register.html' )); 
-});
-
-app.get('/templates', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/templates.html'));
-});
-
-app.get('/accessibility', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/accessibility.html'));
-})
-app.get('/checkout', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname,'/src/static/pages/checkout.html'));
-});
-app.get('/products', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/products.html' ));
-});
-
-app.get('/Privacy Policy', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/csspolicy.html' ));
-});
-app.get('/Procedures', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/cssprocedures.html' ));
-});
-
-app.get('/projects', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/projects.html' ));
-});
-
-app.get('/reports', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/reports.html' ));
-});
-
-app.get('/logout', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/logout.html' ));
-});
-
-app.get('/contact', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/contact.html' ));
-});
-
-app.get('/sources', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/sources.html' ));
-});
-
-app.get('/about', ensureAuthenticated, (_req, res) => {
-	res.sendFile(_join(__dirname, '/src/static/pages/about.html' ));
-});
-
+    app.set('view engine', 'ejs');
+    app.get('/reset password', function(req, res) {
+       res.render('views/reset-password');
+    });
+    
+    app.get('/forgot password', function(req, res) {
+       res.render('views/forgot-password');
+    });
+    
+    
+    app.use(express.static(path.join(__dirname, 'public' )));
+    app.use(express.static(path.join(__dirname, 'src', 'static)')));
+    
+    app.get('/dashboard', function(req, res) {
+       res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    });
+    
+    app.get('/error',function(req, res) {
+       res.sendFile(path.join(__dirname, 'public', '404.html'));
+    })
+    
+    app.get('/contact', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'contact.html'));
+    });
+    
+    app.get('/about', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'about.html'));
+    });
+    
+    app.get('/login', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'login.html'));
+    });
+    
+    app.get('/register', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'register.html'));
+    });
+    
+    app.get('/logout', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'logout.html'));
+    });
+    
+    app.get('/checkout', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'checkout.html'));
+    });
+    
+    app.get('/templates', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'templates.html'));
+    });
+    
+    app.get('/products', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'products.html'));
+    });
+    
+    app.get('/projects', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'projects.html'));
+    });
+    
+    app.get('/sources', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'sources.html'));
+    });
+    
+    app.get('/accessibility', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'accessibility.html'));
+    });
+    
+    app.get('/policies', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'csspolicy.html'));
+    });
+    
+    app.get('/procedures', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'cssprocedures.html'));
+    });
+    
+    app.get('/terms&conditions', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'termsandconditions.html'));
+    });
+    
+    app.get('/profile', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'views', 'profile.html'));
+    });
+    
+    app.get('/cart', function(req,res) {
+       res.sendFile(path.join(__dirname, 'src', 'static', 'pages', 'cart.html'));
+    });
 
 function toggleOptions(event) {
     const selectElement = document.getElementById("sessionOptions1");
