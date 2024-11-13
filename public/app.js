@@ -3,8 +3,8 @@ const app = express();
 import express from 'express';
 import session from 'express-session';
 import flash from 'connect-flash';
-import passport, { initialize, session as _session, authenticate } from 'passport';
-import User, { findOne } from '../src/user.js';
+import pkg from 'passport';
+const { initialize, session: _session, authenticate } = pkg;
 import { join } from 'path';
 
 app.use(express.static('./src/static'));

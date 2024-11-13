@@ -3,6 +3,7 @@ favicon.ico
 .vscode/
 .python/
 .cpython/
+.node_modules/finalhandler/
 
 # Build output
 dist/
