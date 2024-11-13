@@ -7,6 +7,8 @@ const User = require('./user.js');
 
 const path = require('path');
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app');
     greetUser('World');
@@ -304,7 +306,7 @@ document.getElementById("multiCollapse1").addEventListener("click", function() {
     
   });
 
-    const PORT = process.env.PORT || 3000
+    const PORT = process.env.PORT || 5000
     app.listen(PORT, () => {
         console.log('Server running on port ${PORT}')
     })

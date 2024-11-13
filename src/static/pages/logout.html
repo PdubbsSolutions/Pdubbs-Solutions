@@ -5,8 +5,9 @@
       <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width=1200, initial-scale=1.0"/>
       <meta http-equiv="refresh" content="url=https://pdubbssolutions.ca"/>
-      <link rel="stylesheet"  type="text/css" href="/src/static/styles.css" />
-      <title>Pdubbs Solutions | Login Page</title>
+      <link rel="stylesheet"  type="text/css" href="/src/styles.css" />
+      <title>Pdubbs Solutions | Logout</title>
+       <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp"></script>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet" />
@@ -21,6 +22,14 @@
       <p> You have been successfully logged out.</p>
       <button id="logoutButton">Log Out</button>
    </div>
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp', {action: 'LOGOUT'});
+        });
+      }
+    </script>
    <script src="/src/index.mjs"></script>
    <footer style="margin-top: 5px;">
       <div style="display: inline; margin-top: 0px; text-decoration: none;"  class="auth-buttons"><a href="/src/static/pages/login.html">Login</a> | <a href="/src/static/pages/register.html">Register</a> | <a href="/src/static/pages/contact.html">Contact</a> | <a href="/src/static/pages/cart.html">Cart</a></div>

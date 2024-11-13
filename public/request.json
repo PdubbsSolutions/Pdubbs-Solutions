@@ -1,0 +1,8 @@
+{
+   "event": {
+     "token": "TOKEN",
+     "expectedAction": "USER_ACTION",
+     "siteKey": "6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp",
+     "API_KEY": "https://recaptchaenterprise.googleapis.com/v1/projects/pdubbs-final/assessments?key=API_KEY"
+   }
+ }

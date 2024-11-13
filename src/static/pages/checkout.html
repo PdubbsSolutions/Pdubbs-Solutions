@@ -1,2 +1,15 @@
 <!DOCTYPE html>
-<body></body>
+<head>
+   <title>Checkout</title>
+<script src="https://www.google.com/recaptcha/enterprise.js?render=6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp"></script>
+</head>
+<body>
+   <script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.enterprise.ready(async () => {
+          const token = await grecaptcha.enterprise.execute('6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp', {action: 'CHECKOUT'});
+        });
+      }
+    </script>
+</body>

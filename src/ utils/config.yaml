@@ -6,6 +6,6 @@ subject:
 lifeitme: "864400s"
 server:
   host: localhost
-  port: 3000;
+  PORT: 5000;
 
 $csr = Get-Content "\request.csr" -Raw

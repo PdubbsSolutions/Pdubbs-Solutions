@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=1200, initial-scale=1.0"/>
+        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="/src/static/styles.css" />
     <title>Pdubbs Solutions | Registration</title>
@@ -40,6 +41,14 @@
            window.location.href= '/login.html';
            });
         </script>
+        <script>
+            function onClick(e) {
+              e.preventDefault();
+              grecaptcha.enterprise.ready(async () => {
+                const token = await grecaptcha.enterprise.execute('6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp', {action: 'REGISTER'});
+              });
+            }
+          </script>
       </div>
     </section>
      <footer style="margin-top: 5px;">
