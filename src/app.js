@@ -7,8 +7,6 @@ const User = require('./user.js');
 
 const path = require('path');
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app');
     greetUser('World');
@@ -304,7 +302,36 @@ function toggleInput(event){
 document.getElementById("multiCollapse1").addEventListener("click", function() {
     this.classList.remove("expanded");
     
-  });
+  });  
+  const directory = './source\repos\Pdubbs-final'
+  
+  function replacePaths(dir) {
+    const files = fs.readdirSync(dir);
+  
+    files.forEach(file => {
+      const filePath = path.join(dir, file);
+      const stat = fs.statSync(filePath);
+  
+      if (stat.isDirectory()) {
+        replacePaths(filePath);  
+      } else if (filePath.endsWith('.js') || filePath.endsWith('.mjs')) {
+        let content = fs.readFileSync(filePath, 'utf-8');
+ 
+        content = content.replace(/path\.join\((.*?)\)/g, (match, p1) => {
+          return `__dirname + ${p1}`;
+        });
+  
+        content = content.replace(/path\.resolve\((.*?)\)/g, (match, p1) => {
+          return `__dirname + ${p1}`;
+        });
+  
+        fs.writeFileSync(filePath, content, 'utf-8');
+      }
+    });
+  }
+  
+  replacePaths(directory);
+  
 
     const PORT = process.env.PORT || 5000
     app.listen(PORT, () => {
