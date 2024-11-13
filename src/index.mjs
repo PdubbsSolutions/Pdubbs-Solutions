@@ -1,3 +1,14 @@
+import path from path
+import { fileURLToPath } from 'url';
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const webpackConfig = await import(path.resolve(__dirname, './webpack.config.js'));
+
+console.log(webpackConfig.default);
+
+export function anotherFunctionFunction() {
+	console.log('This is some function');
+ }
+
 const express = require('express');
 const { createTransport } = require('nodemailer');
 const { config } = require('dotenv');
@@ -147,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	document.getElementById('logoutButton').addEventListener('click', () => {
 		localStorage.removeItem('authToken');
 		localStorage.removeItem('userId');
-		window.location.href = 'login.php';
+		window.location.href = 'login.html';
 	});
 });
 

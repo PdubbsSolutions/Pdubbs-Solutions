@@ -7,6 +7,12 @@ const User = require('./user.js');
 
 const path = require('path');
 
+function someFunction() {
+    console.log('This is some function');
+  }
+  
+  module.exports = someFunction;
+
 document.addEventListener('DOMContentLoaded', () => {
     const appContainer = document.getElementById('app');
     greetUser('World');

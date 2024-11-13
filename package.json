@@ -34,8 +34,8 @@
     "util": "^0.12.5",
     "vim": "^0.1.0",
     "vite-plugin-windicss": "^1.9.3",
-    "webpack":"^5.96.1",
-     "webpack-cli": "^5.1.4",
+    "webpack": "^5.96.1",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^5.1.0",
     "windicss": "^3.5.6",
     "windicss-webpack-plugin": "^1.8.0"
@@ -43,15 +43,17 @@
   "name": "pdubbs-solutions",
   "version": "1.0.0",
   "description": "./build",
+  "type": "module",
   "host": "https://pdubbssolutions.ca",
   "directories": {
     "doc": "docs",
     "test": "test"
   },
   "scripts": {
-    "start": "webpack serve --open",
     "build": "webpack",
-    "main": "app.js"
+    "home": "http-server ./index.html -p 5000",
+    "start": "node src/app.js",
+    "main": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -68,16 +70,20 @@
     "@babel/preset-env": "^7.26.0",
     "babel-loader": "^9.2.1",
     "css-loader": "^7.1.2",
+    "esbuild": "^0.24.0",
+    "esbuild-loader": "^4.2.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
     "html-loader": "^5.1.0",
+    "http-server": "^14.1.1",
     "ncp": "^2.0.0",
     "prettier-eslint": "^16.3.0",
     "style-loader": "^4.0.0",
     "superstatic": ">=5.0.2",
     "webpack": "^5.96.1",
     "webpack-cli": "^5.1.4",
+    "webpack-dev-middleware": "^7.4.2",
     "webpack-dev-server": "^5.1.0"
   },
   "browserslist": {
