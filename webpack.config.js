@@ -1,18 +1,16 @@
 const path = require('path');
 require('node, app.js');
-import webpack from webpack;
-import pkg from 'webpack';
-const { webpack } = pkg;
-import { someFunction } from './src/app.js';
+
+import { someFunction } from './public/app.js';
 someFunction(); 
 
-import { anotherFunction } from './src/index.mjs';
+import { anotherFunction } from './public/index.mjs';
 anotherFunction(); 
 
 config()
 
 export default {
-  entry: './src/app.js',
+  entry: './public/app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './src/static')
@@ -20,7 +18,7 @@ export default {
 };
 
 module.exports = {
-  entry: './src/app.js',
+  entry: './public/app.js',
   plugins: [
     new webpack.LoaderOptionsPlugin({
     port:5000,

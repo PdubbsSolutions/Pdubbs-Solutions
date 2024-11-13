@@ -1,5 +1,11 @@
 import path from path
 import { fileURLToPath } from 'url';
+import webpack from webpack;
+import pkg from 'webpack';
+const { webpack } = pkg;
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import config from './webpack.config.js';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webpackConfig = await import(path.resolve(__dirname, './webpack.config.js'));
 

@@ -16,5 +16,5 @@
     ],
     "include": [
         "src/**/*"
-    ]
+, "public/server.js", "public/index.mjs", "public/app.js", "public/express.js"    ]
 }
