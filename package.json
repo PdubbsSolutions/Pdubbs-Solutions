@@ -1,3 +1,4 @@
+
 {
   "dependencies": {
     "@visto9259/php-webpack-plugin": "^1.1.0",
@@ -23,6 +24,7 @@
     "python": "^0.0.4",
     "python3": "^0.0.1",
     "react-scripts": "^3.0.1",
+    "recaptcha-v3": "1.11.3",
     "redirect": "^0.2.0",
     "router": "^2.0.0",
     "ruby": "^0.6.1",

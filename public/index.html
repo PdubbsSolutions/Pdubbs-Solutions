@@ -18,6 +18,7 @@
       name="google-site-verification"
       content="BF8pc_URLQQbba5sQgIi_MVADChvuQJk0Pci3MhcWWc"
     />
+    <script  name="recaptcha" src="https://www.google.com/recaptcha/api.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdLHH0qAAAAAL6rKWBW22yjZQNaHbKcumnSzwIp"></script>
     <script>
       if (window.location.hostname === "github") {
@@ -52,7 +53,7 @@
       src="/src/static/images/Pdubbs-Logo.jpg"
       alt="logo"
       class="logo"
-      onclick="goHome()"
+      onclick="goHome(index.html)"
     />
     <div class="dashboard-container">
       <div class="top-icon" style="display: none">
@@ -271,9 +272,14 @@
                   name="document"
                   required
                 />
-                <button style="margin-right: 10px;" id="dashboardSubmit" type="submit">
+                <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback="onSubmit" data-action="submit" style="margin-right: 10px;" id="dashboardSubmit" type="submit">
                   Submit Custom Request
                 </button>
+                <script>
+                  function onSubmit(token) {
+                    document.getElementById("dashboardSubmit").submit();
+                  }
+                </script>
               </form>
             </div>
           </section>
@@ -323,13 +329,18 @@
                     <option value="recurring">Request Recurring Sessions</option>
                 </select>
                 <script src="/src/app.js"></script>
-
+              
                 </div>
 
-                <button style="margin-left: 160px; position: relative;" 
+                <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback="onSubmit" data-action="submit" style="margin-left: 160px; position: relative;" 
                 id="dashboardSubmit1" type="submit">
                   Book 1:1 Zoom Session
                 </button>
+                <script>
+                  function onSubmit(token) {
+                    document.getElementById("dashboardSubmit1").submit();
+                  }
+                </script>
               </form>
             </div>
           </section>
@@ -372,9 +383,14 @@
                   required
                 ></textarea
                 >
-                <button  style="margin-left: 200px; margin-top: 2px; position:relative;" id="dashboardSubmit2" type="submit">
+                <button class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback="onSubmit" data-action="submit" style="margin-left: 200px; margin-top: 2px; position:relative;" id="dashboardSubmit2" type="submit">
                   Submit Partnership Request
                 </button>
+                <script>
+                  function onSubmit(token) {
+                    document.getElementById("dashboardSubmit2").submit();
+                  }
+                </script>
               </form>
             </div>
           </section>
@@ -448,7 +464,7 @@
         alt="logo"
         class="logo"
         id="footer-logo"
-        onclick="goHome()"
+        onclick="goHome(index.html)"
       />
     </footer>
     <script type="text/javascript" src="/src/index.mjs"></script>

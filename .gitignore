@@ -3,7 +3,6 @@ favicon.ico
 .vscode/
 .python/
 .cpython/
-node_modules/
 
 # Build output
 dist/
@@ -58,6 +57,7 @@ Desktop.ini
 #config
 config/venv/
 .git/index.lock
+.env/
 
 #environments
 my_flask_project
@@ -71,6 +71,8 @@ instance/
 venv/
 *.pyo
 .python-version
+package.json
+
 
 #docker
 .dockerignore

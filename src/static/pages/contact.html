@@ -18,7 +18,7 @@
     <body> 
       
    <header>
-      <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; left: 310px; cursor: pointer; max-height: 200px;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome()" />
+      <img style="z-index: -999; position: relative; top: 15px; max-width: 200px; padding: 0; display: block; left: 310px; cursor: pointer; max-height: 200px;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" onclick="goHome(index.html)" />
   </header>
    <div class="contact-container" id="wrapper">
       <h1 class="headingText"><span> Contact Us</span></h1>
@@ -34,7 +34,7 @@
                <option vlaue="medium">Medium-sized Enterprises | 101 - 499 employees</option>
                <option value="large">Large Enterprises | 500+ employees </option>
                <option value="other">I am completing this form to contact PDubbs Solutions</option>
-               <option value="other-size">Other (Please Specify)</option>
+               <option value="other-size">Other (Please Specify Below)</option>
             </select>
             <input type="text" id="otherDetailsInput" style="display:none; margin-top:10px;" placeholder="Please specify the size of your Business.">
             <label for="priority"></label>
@@ -44,14 +44,15 @@
                <option value="medium">Medium Priority | 10 - 19 Business Days</option>
                <option value="high">High Priority | 7 Business Days or Less</option>
                <option value="other">I am completing this form to contact PDubbs Solutions</option>
-               <option value="details">Other (Please Specify)</option>
+               <option value="details">Other (Please Specify Below)</option>
            </select>
            <input type="text" id="otherDetailsInput1" style="display:none; margin-top:10px;" placeholder="Please specify the urgency of your contact request">
            <lablel for="message"></lablel>
            <textarea type="message" id="message" name="message" placeholder="Enter  Message for Pdubbs Solutions here:" rows="1.3rem" required></textarea>
            <label>
             <input type="checkbox" id="agreement" required><p style="font-size: 14px;  margin-left: 165px; text-align: right; display:inline-block; position:relative; cursor: pointer;"> I, agree to be contacted by PDubbs Solutions</p></label>
-            <button style="display: block; margin-top: 3px; margin-left: 160px;" type="submit">Submit</button>
+            <button style="display: block; margin-top: 3px; margin-left: 160px;" type="submit" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback="onSubmit" data-action="submit">Submit
+            </button>
             </form>
             <div id="confirmationMessage" style="display:none;">
                <p class="content-paragraph">thank you, <span id="submittedName"></span>! PDubbs Solutions will respond to your request within 0-2 business days.</p>
@@ -68,7 +69,7 @@
             </div>
             <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative &amp; Project Management Services</span><br>
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
-            <img style=" justify-content:center; max-width: 100px; padding: 0; max-height: 100px; left: 340px;margin-top: -20px; cursor: pointer;  z-index: -999; vertical-align: middle;  position:absolute;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
+            <img style=" justify-content:center; max-width: 100px; padding: 0; max-height: 100px; left: 340px;margin-top: -20px; cursor: pointer;  z-index: -999; vertical-align: middle;  position:absolute;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome(index.html)" />
          </footer>
          <script type="text/javascript" src="/src/index.mjs"></script>
          <script type="text/javascript" src="/src/app.js"></script>

@@ -14,11 +14,11 @@
 </head>
 <body>
     <header>
-        <img style="z-index: -999; position: relative; top: 5px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px; top: 5px;" src="/src/static/images/Pdubbs-Logo.jpg"  alt="logo" class="logo" onclick="goHome()" />
+        <img style="z-index: -999; position: relative; top: 5px; max-width: 200px; padding: 0; display: block; margin: 0 auto; cursor: pointer; max-height: 200px; top: 5px;" src="/src/static/images/Pdubbs-Logo.jpg"  alt="logo" class="logo" onclick="goHome(index.html)" />
         <h1 style="text-align: center; margin-left: 105px; position: absolute;" id="register">Registration</h1>
     </header>
     <section class="registation">
-      <p style="text-align: center;">Already have an account? <a  class="btn navbutton" href="login" id="login" >Login here</a></p>
+      <p style="text-align: center;">Already have an account? <a  class="g-recaptcha btn navbutton" href="login" id="login" >Login here</a></p>
       <div class="register">
          <div >
      
@@ -34,7 +34,8 @@
             <span id="passwordCheck" class="checkmark" style="display:none;">✔️</span>
             <input type="password" id="password2" name="password2" placeholder="Confirm Password" required>
             <span id="password2Check" class="checkmark" style="display:none;">✔️</span>
-            <button  style="margin-left: 150px; position: relative;" type="submit" onclick=>Register</button>
+            <button style="display: block; margin-top: 3px; margin-left: 160px;" type="submit" class="g-recaptcha" data-sitekey="reCAPTCHA_site_key" data-callback="onSubmit" data-action="REGISTER">Register Now
+            </button>
         </form>
         <script>
            document.getElementById('registrationForm').addEventListener('submit', function(event) {
@@ -62,7 +63,7 @@
             </div>
             <span style="display:inline; margin-top: 20px;" >Pdubbs Solutions |  Administrative &amp; Project Management Services</span><br>
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center;"></div>
-            <img style=" justify-content:center; max-width: 100px; padding: 0; max-height: 100px; left: 340px;margin-top: -20px; cursor: pointer;  z-index: -999; vertical-align: middle;  position:absolute;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome()" />
+            <img style=" justify-content:center; max-width: 100px; padding: 0; max-height: 100px; left: 340px;margin-top: -20px; cursor: pointer;  z-index: -999; vertical-align: middle;  position:absolute;" src="/src/static/images/Pdubbs-Logo.jpg" alt="logo" class="logo" id="footer-logo" onclick="goHome(index.html)" />
          </footer>
          <script type="text/javascript" src="/src/index.mjs"></script>
          <script type="text/javascript" src="/src/app.js"></script>
