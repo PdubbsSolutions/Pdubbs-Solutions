@@ -3,6 +3,7 @@ from requests import options
 from flask import Flask, jsonify, request, redirect, url_for
 import stripe
 import paypalrestsdk
+import braintree
 import os
 
 app = Flask(__name__)
@@ -41,7 +42,6 @@ def create_stripe_payment_intent():
    except Exception as e:
       return jsonify(error=str(e)),400
 
-
 @app.route('/create_paypal_payment', methods=['POST'])
 def create_paypal_payment():
     data = request.get_json()
@@ -59,15 +59,41 @@ def create_paypal_payment():
         },
         "transactions": [{
             "amount": {
-                "total": amount,
+                "total": f"{amount}",
                 "currency": currency
             },
             "description": "Payment description"
         }]
     })
+
     if payment.create():
-       approval_url = next(link['href'] for link in payment.links if link['rel'] == 'approval_url')
-       return jsonify({"approval_url": approval_url}), 200
+        approval_url = next(link['href'] for link in payment.links if link['rel'] == 'approval_url')
+        return jsonify({"approval_url": approval_url}), 200
     else:
-       return jsonify({"error": payment.error}), 400
-    # Optionally add more code here to handle the payment creation process.
+        return jsonify({"error": payment.error}), 400
+
+@app.route('/execute-paypal-payment', methods=['GET'])
+def execute_paypal_payment():
+    payment_id = request.args.get('paymentId')
+    payer_id = request.args.get('PayerID')
+    payment = paypalrestsdk.Payment.find(payment_id)
+    
+    if payment.execute({"payer_id":payer_id}):
+       return jsonify({'status': 'Payment completed successfully'})
+    else:
+       return jsonify(error=payment.error),400
+    
+@app.route('/cancel-paypal-payment',  methods=['GET'])
+def cancel_paypal_payment():
+   return jsonify({'status', 'Payment cancelled'})
+if __name__ ==  '__main__':
+   app.run(port=5000)
+
+#braintree
+gateway = braintree.BraintreeGateway(
+   braintree.Configuration(
+      environment=braintree.Environment.Sandbox, #switch to production
+      public_key='ADD_PUBLIC_KEY',
+      private_key='ADD_PRIVATE_KEY'
+   )
+)
