@@ -4,6 +4,7 @@
     "buffer": "^6.0.3",
     "connect-flash": "^0.1.1",
     "crypto-browserify": "^3.12.1",
+    "debug": "^4.3.7",
     "ejs": "^3.1.10",
     "eslint": "^8.57.1",
     "express": "^4.21.1",
@@ -45,17 +46,17 @@
   "name": "pdubbs-solutions",
   "version": "1.0.0",
   "description": "./build",
-  "type": "module",
+  "type": "commonjs",
   "host": "https://pdubbssolutions.ca",
   "directories": {
-    "doc": "docs",
-    "test": "test"
+    "public": "public",
+    "src": "src"
   },
   "scripts": {
     "build": "webpack",
     "home": "http-server ./index.html -p 5000",
-    "start": "node public/app.js",
-    "main": "node public/app.js"
+    "start": "node public/app.cjs",
+    "main": "node public/app.cjs"
   },
   "repository": {
     "type": "git",

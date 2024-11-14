@@ -1,6 +1,10 @@
-const express =require('express');
+const express = require('express');
 const session = require('express-session');
 const app = express();
+const passport = require('passport');
+
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.set('view engine', 'ejs');
 app.get('profile', (req, res) =>{

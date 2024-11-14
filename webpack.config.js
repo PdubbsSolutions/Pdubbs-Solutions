@@ -1,16 +1,22 @@
-const path = require('path');
-require('node, app.js');
+require('webpack-cli');
+require('webpack');
+require('path');
+require('./public');
+require('./server.js');
+require('./src')
 
-import { someFunction } from './public/app.js';
+import { cli } from 'webpack';
+import { someFunction } from './public/app.cjs/index.js';
 someFunction(); 
 
-import { anotherFunction } from './public/index.mjs';
+import { anotherFunction } from './public/index.cjs';
+import path from 'path-browserify';
 anotherFunction(); 
 
-config()
+config(webpack-cli);
 
 export default {
-  entry: './public/app.js',
+  entry: './public/app.cjs',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './src/static')
@@ -18,7 +24,7 @@ export default {
 };
 
 module.exports = {
-  entry: './public/app.js',
+  entry: './public/app.cjs',
   plugins: [
     new webpack.LoaderOptionsPlugin({
     port:5000,

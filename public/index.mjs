@@ -1,6 +1,5 @@
-import path from path
+import { join } from 'path';
 import { fileURLToPath } from 'url';
-import webpack from webpack;
 import pkg from 'webpack';
 const { webpack } = pkg;
 import webpackDevMiddleware from 'webpack-dev-middleware';
@@ -17,7 +16,6 @@ export function anotherFunctionFunction() {
 
 const express = require('express');
 const { createTransport } = require('nodemailer');
-const { config } = require('dotenv');
 const app = express();
 
 // Load environment variables
